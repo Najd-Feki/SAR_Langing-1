@@ -5,6 +5,7 @@
   text-align: center;
   font-family:"IBM Plex Sans Arabic";
   padding: 40px 20px;
+  background-color: var(--nav-bg);
 }
 .error-image {
   width: 400px;
@@ -27,7 +28,7 @@
 }
 
 .error-message {
-  color: #000;
+  color: var(--nav-text);
 }
 
 .error-title {
