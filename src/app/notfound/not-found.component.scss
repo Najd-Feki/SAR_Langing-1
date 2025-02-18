@@ -14,7 +14,7 @@
 }
 
 .error-code {
-  font-size: 200px;
+  font-size: var(--font-size-ultrabig);
   color: #000;
   font-weight: 700;
   margin: 0;
@@ -32,13 +32,13 @@
 }
 
 .error-title {
-  font-size: 24px;
+  font-size: var(--font-size-large);
   font-weight: 600;
   margin: 0;
 }
 
 .error-description {
-  font-size: 18px;
+  font-size: var(--font-size-medium);
   font-weight: 400;
   margin-top: 16px;
 }
@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: var(--font-size-normal);
   color: #fff;
   font-weight: 500;
   text-decoration: none;
@@ -65,7 +65,7 @@
 
 @media (max-width: 768px) {
   .error-code {
-      font-size: 120px;
+    font-size: var(--font-size-big);
   }
 
   .error-image {
@@ -73,10 +73,10 @@
   }
 
   .error-title {
-      font-size: 20px;
+    font-size: var(--font-size-mediumM);
   }
 
   .error-description {
-      font-size: 16px;
+    font-size: var(--font-size-normal);
   }
 }

@@ -42,8 +42,8 @@
       position: relative;
       
       h2 {
-          font-size: 24px;
-          font-weight: bold;
+        font-size: var(--font-size-large);
+        font-weight: bold;
           color: #000;
           line-height: 38px;
           color: var(---nav-text);
@@ -51,8 +51,8 @@
       }
 
       p {
-          font-size: 16px;
-          color: var(---nav-text);
+        font-size: var(--font-size-normal);
+          color: var(--nav-text);
           margin: 10px 0 20px;
           width: 964px;
           @media screen and (max-width: 768px) {
@@ -73,9 +73,9 @@
       
       .cta-btn {
         padding: 8px 16px;
-        font-size: 14px;
+        font-size: var(--font-size-small);
         font-weight: 500;
-        color: var(---nav-text);
+        color: var(--nav-text);
         background-color: transparent;
         border: 1px solid;
         border-radius: 6px;
@@ -129,7 +129,7 @@
           }
 
           h3 {
-              font-size: 36px;
+              font-size: var(--font-size-xl);
               color: #0b5345;
               line-height: 48px;
               font-weight: lighter;
@@ -137,8 +137,8 @@
           }
 
           p {
-              font-size: 14px;
-              color: #666;
+            font-size: var(--font-size-small);
+            color: #666;
           }
       }
   }
@@ -201,14 +201,14 @@
   }
 
   .stat h3 {
-      font-size: 24px; /* Adjusted to match image */
+      font-size: var(--font-size-large); /* Adjusted to match image */
       color: #0b5345;
       font-weight: 600;
       margin: 5px 0;
   }
 
   .stat p {
-      font-size: 12px;
+      font-size: var(--font-size-xsmall);
       color: #666;
       margin: 0;
   }
@@ -218,7 +218,7 @@
   }
 
   .text-content h2 {
-      font-size: 20px;
+      font-size: var(--font-size-mediumM);
   }
 
   

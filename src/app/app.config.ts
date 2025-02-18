@@ -11,7 +11,7 @@ const routes: Routes = [
 
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
     {path:'details', component:DetailsComponent},
-    { path: '**', component: NotFoundComponent }
+    { path: '404', component: NotFoundComponent }
   
 ];
 export function createTranslateLoader(http: HttpClient) {

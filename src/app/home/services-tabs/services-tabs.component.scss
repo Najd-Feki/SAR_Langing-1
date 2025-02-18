@@ -5,7 +5,6 @@
     color: var(--nav-text);
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  
     .tabs {
       display: flex;
       gap: 12px;
@@ -46,15 +45,15 @@
         padding-right: 20px;
   
         h2 {
-          font-size: 22px;
+            font-size: var(--font-size-large);
           font-weight: bold;
           color: var(--nav-text);
           margin-bottom: 12px;
         }
   
         p {
-          font-size: 16px;
-          color: var(--nav-text);
+            font-size: var(--font-size-normal);
+            color: var(--nav-text);
           line-height: 1.5;
         }
       }
@@ -86,13 +85,13 @@
   
           .text {
             flex: 1;
-            font-size: 16px;
+            font-size: var(--font-size-normal);
             font-weight: 500;
             color: var(--nav-text);
           }
   
           .arrow {
-            font-size: 18px;
+            font-size: var(--font-size-medium);
             font-weight: bold;
             color: var(--nav-text);
           }
@@ -111,14 +110,27 @@
       }
     }
   
-    @media (max-width: 768px) {
-      .tab-content {
-        flex-direction: column;
-  
-        .left {
-          padding-right: 0;
+    @media (max-width: 991px) {
+        .tabs {
+          flex-wrap: wrap; 
+          justify-content: center; 
+          width: 100%; 
+          overflow-x: auto; 
+          white-space: nowrap; 
         }
-      }
-    }
+      
+        .tabs button {
+          flex: 1 1 auto;
+          min-width: 100px; 
+          text-align: center;
+        }
+        .tab-content {
+            flex-direction: column;
+      
+            .left {
+              padding-right: 0;
+            }
+          }}
+      
   }
   

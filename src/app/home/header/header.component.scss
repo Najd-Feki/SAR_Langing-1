@@ -61,7 +61,7 @@
     margin: auto 0;
     align-items: center;
     gap: 16px;
-    font-size: 14px;
+    font-size: var(--font-size-small);
     color: #6c737f;
     text-align: right;
     line-height: 1;
@@ -96,7 +96,7 @@
   .platform-logo {
     align-self: stretch;
     margin: auto 0;
-    font-size: 14px;
+    font-size: var(--font-size-small);
     font-weight: 500;
   }
   .menu-items {
@@ -104,7 +104,7 @@
     display: flex;
     min-width: 240px;
     margin: auto 0;
-    font-size: 16px;
+    font-size: var(--font-size-normal);
     color: #161616;
     justify-content: start;
     flex-wrap: wrap;
@@ -161,7 +161,7 @@
     min-width: 240px;
     margin: auto 0;
     align-items: center;
-    font-size: 16px;
+    font-size: var(--font-size-normal);
     color: #161616;
     white-space: nowrap;
     justify-content: end;
@@ -248,7 +248,7 @@
   .tab-title-4 {
     align-self: stretch;
     margin: auto 0;
-    font-size: 16px;
+    font-size: var(--font-size-normal);
   }
   @media (max-width: 991px) {
     .tab-title-2,

@@ -134,7 +134,7 @@
   min-width: 240px;
   overflow: hidden;
   font-family: "IBM Plex Sans Arabic";
-  font-size: 16px;
+  font-size: var(--font-size-normal);
   color: #384250;
   font-weight: 400;
   white-space: nowrap;
@@ -204,8 +204,8 @@
     Roboto,
     Helvetica,
     sans-serif;
-  font-size: 16px;
-  color: #fff;
+    font-size: var(--font-size-normal);
+    color: #fff;
   font-weight: 500;
   white-space: nowrap;
   justify-content: center;
@@ -264,8 +264,8 @@
     Roboto,
     Helvetica,
     sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+    font-size: var(--font-size-medium);
+    font-weight: 600;
   line-height: 2;
   margin: 0;
 }
@@ -281,7 +281,7 @@
   align-items: start;
   gap: 8px;
   font-family: "IBM Plex Sans Arabic";
-  font-size: 16px;
+  font-size: var(--font-size-normal);
   color: #161616;
   font-weight: 500;
   white-space: nowrap;

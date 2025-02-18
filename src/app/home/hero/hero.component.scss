@@ -64,12 +64,12 @@
 }
 .hero-title {
   margin: 0 0 24px 0;
-  font-size: 60px;
+  font-size: var(--font-size-xxxxl);
   line-height: 1.2;
   font-weight: 500;
   font-family: "IBM Plex Sans Arabic";
   @media screen and (max-width: 991px) {
-    font-size: 50px;
+    font-size: var(--font-size-xxxl);
     margin-top: 100px;
     margin-bottom: 24px;
   }
@@ -80,7 +80,7 @@
   height: auto;
   margin-bottom: 32px;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: var(--font-size-mediumM);
   @media screen and (max-width: 991px) {
     line-height: 1.64;
   }
