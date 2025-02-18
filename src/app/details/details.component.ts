@@ -12,7 +12,7 @@ export class DetailsComponent {
   selectedAlt: string = 'Main News Image';
 
   images = [
-    { src: 'assets/images/english.jpg', alt: 'Related Image 1' },
+    { src: 'assets/images/news-image.png', alt: 'Related Image 1' },
     { src: 'assets/images/news-image.png', alt: 'Related Image 2' },
     { src: 'assets/images/news-image.png', alt: 'Related Image 3' }
   ];

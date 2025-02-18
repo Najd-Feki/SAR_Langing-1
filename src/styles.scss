@@ -18,6 +18,7 @@
     --nav-border: var(--nav-border-light);
     --services-bg: var(--grey-background-light);
     --articles-bg :var(--nav-bg-light);
+    --details-bg: var(--nav-bg-light);
   }
   
   body.dark-theme {
@@ -27,6 +28,8 @@
     --nav-border: var(--nav-border-dark);
     --services-bg: var(--grey-background-dark);
     --articles-bg : var( --nav-bg-dark);
+    --details-bg: var(--nav-bg-dark);
+
 
   }
   

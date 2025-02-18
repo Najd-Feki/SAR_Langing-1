@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { NotFoundComponent } from './notfound/notfound.component';
+import { NotFoundComponent } from './notfound/not-found.component';
 import { DetailsComponent } from './details/details.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { DetailsComponent } from './details/details.component';
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-    DetailsComponent
+    DetailsComponent,
   ],
   imports: [
     CommonModule,

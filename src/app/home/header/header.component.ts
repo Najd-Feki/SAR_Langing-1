@@ -3,6 +3,7 @@ import { SearchComponent } from '../search/search.component';
 import { CommonModule, isPlatformBrowser, NgClass, NgIf } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ThemeService } from '../../../theme.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -32,9 +33,10 @@ export class HeaderComponent {
     { code: 'en', label: 'English'   },
   ];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, public  translate: TranslateService , public themeService: ThemeService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,private router: Router , public  translate: TranslateService , public themeService: ThemeService) {
     this.isBrowser = isPlatformBrowser(this.platformId); 
 
+  
     if (this.isBrowser) {
       this.translate.setDefaultLang('en');
       const savedLang = localStorage.getItem('language') || 'en';
@@ -42,7 +44,10 @@ export class HeaderComponent {
       this.translate.use(savedLang);
     }
   }
-
+  goToDetails() {
+    console.log("true")
+    this.router.navigate(['/details']);
+  }
   toggleTheme() {
     this.themeService.toggleTheme();
   }

@@ -20,10 +20,13 @@
         <button class="hamburger-menu"  (click)="toggleMenu()" aria-label="Open menu">
           <img loading="lazy" src="/assets/icons/menu-01.svg" class="hamburger-icon" alt="Menu" />
         </button>
+        <button class="details-button" (click)="goToDetails()">Details</button>
+
       </div>
       <button (click)="toggleTheme()" class="theme-toggle-btn">
         <span class="toggle-circle"></span>
       </button>
+
       
         <ul class="menu-items" role="menubar">
           <li *ngFor="let item of menuItems; let i = index" role="none">
