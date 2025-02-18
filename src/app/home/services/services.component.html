@@ -2,17 +2,17 @@
   <div class="container">
     <div class="header">
       <div class="text-content">
-        <h2>{{ 'SERVICES.TITLE' | translate }}</h2>
-        <p>{{ 'SERVICES.DESCRIPTION' | translate }}</p>
+        <h2>{{ "SERVICES.TITLE" | translate }}</h2>
+        <p>{{ "SERVICES.DESCRIPTION" | translate }}</p>
       </div>
-      <button class="view-all">{{ 'SERVICES.VIEW_ALL' | translate }}</button>
+      <button class="view-all">{{ "SERVICES.VIEW_ALL" | translate }}</button>
     </div>
 
     <div class="carousel-wrapper">
-
-      <div class="carousel-container" #carouselContainer>
-        <div class="cards">
-          <div class="card" *ngFor="let service of services">
+      <div class="swiper-container" #carouselContainer>
+        <!-- Wrapping swiper-slide elements in swiper-wrapper -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide card" *ngFor="let service of services">
             <div class="card-icon">
               <div class="icon-img icon-check"></div>
             </div>
@@ -20,34 +20,38 @@
             <p>{{ service.content | translate }}</p>
 
             <div class="tags">
-              <span 
-                class="tag" 
+              <span
+                class="tag"
                 *ngFor="let tag of service.tags; let i = index"
-                [ngStyle]="{'background-color': tagColors[i % tagColors.length] , 'color': Colors[i % tagColors.length]}"
+                [ngStyle]="{
+                  'background-color': tagColors[i % tagColors.length],
+                  color: Colors[i % tagColors.length]
+                }"
               >
                 {{ tag | translate }}
               </span>
             </div>
-            
 
             <div class="card-actions">
-              <button class="btn-secondary">{{ service.secondaryAction | translate }}</button>
-              <button class="btn-primary">{{ service.primaryAction | translate }}</button>
+              <button class="btn-secondary">
+                {{ service.secondaryAction | translate }}
+              </button>
+              <button class="btn-primary">
+                {{ service.primaryAction | translate }}
+              </button>
             </div>
           </div>
         </div>
       </div>
-    
     </div>
+
     <!-- Swiper Navigation -->
     <div class="pagination-wrapper">
       <div class="swiper-button">
-        <div class="swiper-button-prev" ></div>
+        <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
-  
     </div>
     <div class="swiper-pagination"></div>
-
   </div>
 </section>
