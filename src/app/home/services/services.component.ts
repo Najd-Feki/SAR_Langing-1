@@ -101,7 +101,6 @@ export class ServicesComponent implements AfterViewInit {
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
       setTimeout(() => {
-        console.log('Platform is browser, initializing Swiper...'); // Debugging log
         const container = this.carouselContainer?.nativeElement;
         if (!container || !container.querySelector('.swiper-slide')) {
           console.warn('Swiper: No slides found, skipping initialization.');
