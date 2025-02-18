@@ -56,9 +56,27 @@
           </div>
         </div>
       </div>
-      
-    </div>
 
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <div class="links">
+          <a href="#">{{ 'FOOTER.SITEMAP' | translate }}</a>
+          <a href="#">{{ 'FOOTER.RSS' | translate }}</a>
+          <a href="#">{{ 'FOOTER.MOBILE_APP' | translate }}</a>
+        </div>
+    
+        <p class="bold">{{ 'FOOTER.RIGHTS_RESERVED' | translate }} &copy; {{ currentYear }}</p>
+        <p>{{ 'FOOTER.DEVELOPED_BY' | translate }}</p>
+        <p class="last-modified">{{ 'FOOTER.LAST_MODIFIED' | translate }}</p>
+      </div>
+    
+      <div class="footer-logos">
+        <img src="assets/icons/logoplaceholder.svg" alt="Platform Logo">
+        <img [src]="footerLogo" alt="Footer Logo">
+      </div>
+    </div>
+    
     
   
   </div>

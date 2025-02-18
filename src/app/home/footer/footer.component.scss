@@ -24,6 +24,7 @@
         margin-bottom: 10px;
         padding-bottom: 8px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        white-space: nowrap
       }
 
       ul {
@@ -67,47 +68,60 @@
   }
 
   .footer-bottom {
-    text-align: start;
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 20px;
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
 
-    .links {
-      display: flex;
-      justify-content: start;
-      gap: 20px;
-      margin-bottom: 10px;
-
-      a {
-        color: rgba(255, 255, 255, 0.8);
-        text-decoration: none;
-        font-size: 14px;
-        transition: color 0.3s;
-
-        &:hover {
-          color: white;
-        }
-      }
-    }
-
-    p {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.8);
-      margin: 5px 0;
-    }
-
-    .footer-logos {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-
-      img {
-        height: 40px;
-        object-fit: contain;
-      }
+    &:hover {
+      color: white;
     }
   }
+
+
+p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 5px 0;
 }
-@media (max-width: 768px) {
+  .footer-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .footer-logos img {
+    height: 40px;
+    width: auto;
+  }
+  
+}
+
+
+@media (max-width: 991px) {
   .footer {
     padding-left: 32px;
     padding-right: 40px;
@@ -118,8 +132,11 @@
     flex-direction: column;
     gap: 20px; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    h3{
+      min-width: 38vw;
 
-  }
+    }
+  } 
   .social-access {
     display: flex;
     gap: 32px;
@@ -132,7 +149,7 @@
 
   .social-icons, .accessibility-icons {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 10px;
   }
   
@@ -158,17 +175,23 @@
   
 
 
-  .footer-bottom a {
-    display: none
+  .footer-bottom {
+    align-items: start !important;
+margin-top: 25%;
+ }
+
+  .footer-left {
+    align-items: start;
+  }
+  
+  .links {
+display: none !important;
   }
 
-  .footer-bottom .links {
-    flex-direction: column;
-    gap: 10px;
+  .footer-logos {
+    margin-top: 12%;
+    justify-content: start;
+    
   }
 
-  .footer-bottom .footer-logos {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
