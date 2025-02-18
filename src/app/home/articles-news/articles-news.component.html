@@ -1,0 +1,24 @@
+<section class="articles-news">
+  <div class="container">
+    <div class="header">
+      <div class="text-content">
+        <h2>{{ 'ARTICLES.SECTION_TITLE' | translate }}</h2>
+        <p>{{ 'ARTICLES.SECTION_DESCRIPTION' | translate }}</p>
+      </div>
+      <button class="view-all">{{ 'ARTICLES.VIEW_ALL' | translate }}</button>
+    </div>
+
+    <div class="articles-grid">
+      <div class="article-card" *ngFor="let article of articles">
+        <div class="article-image">
+          <img [src]="article.image" alt="{{ 'ARTICLES.IMAGE_ALT' | translate }}">
+        </div>
+        <div class="article-content">
+          <h3>{{ article.title | translate }}</h3>
+          <p>{{ article.description | translate }}</p>
+          <button class="read-more">{{ 'ARTICLES.READ_MORE' | translate }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
