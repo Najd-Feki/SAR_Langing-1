@@ -17,6 +17,7 @@
     --nav-hover: var(--nav-hover-light);
     --nav-border: var(--nav-border-light);
     --services-bg: var(--grey-background-light);
+    --articles-bg :var(--nav-bg-light);
   }
   
   body.dark-theme {
@@ -25,6 +26,8 @@
     --nav-hover: var(--nav-hover-dark);
     --nav-border: var(--nav-border-dark);
     --services-bg: var(--grey-background-dark);
+    --articles-bg : var( --nav-bg-dark);
+
   }
   
   html, body {
