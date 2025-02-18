@@ -23,7 +23,7 @@ import { SearchComponent } from './search/search.component';
     HomeComponent,
 
   ],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent , FooterComponent]
 
 })
 export class HomeModule { }

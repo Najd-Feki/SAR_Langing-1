@@ -33,6 +33,10 @@ export class ServicesComponent implements AfterViewInit {
     { title: 'SERVICES.CARD_TITLE', content: 'SERVICES.CARD_CONTENT', tags: ['SERVICES.TAG_1', 'SERVICES.TAG_2', 'SERVICES.TAG_3'], primaryAction: 'SERVICES.PRIMARY_ACTION', secondaryAction: 'SERVICES.SECONDARY_ACTION' },
     { title: 'SERVICES.CARD_TITLE', content: 'SERVICES.CARD_CONTENT', tags: ['SERVICES.TAG_1', 'SERVICES.TAG_2', 'SERVICES.TAG_3'], primaryAction: 'SERVICES.PRIMARY_ACTION', secondaryAction: 'SERVICES.SECONDARY_ACTION' },
     { title: 'SERVICES.CARD_TITLE', content: 'SERVICES.CARD_CONTENT', tags: ['SERVICES.TAG_1', 'SERVICES.TAG_2', 'SERVICES.TAG_3'], primaryAction: 'SERVICES.PRIMARY_ACTION', secondaryAction: 'SERVICES.SECONDARY_ACTION' },
+    { title: 'SERVICES.CARD_TITLE', content: 'SERVICES.CARD_CONTENT', tags: ['SERVICES.TAG_1', 'SERVICES.TAG_2', 'SERVICES.TAG_3'], primaryAction: 'SERVICES.PRIMARY_ACTION', secondaryAction: 'SERVICES.SECONDARY_ACTION' },
+    { title: 'SERVICES.CARD_TITLE', content: 'SERVICES.CARD_CONTENT', tags: ['SERVICES.TAG_1', 'SERVICES.TAG_2', 'SERVICES.TAG_3'], primaryAction: 'SERVICES.PRIMARY_ACTION', secondaryAction: 'SERVICES.SECONDARY_ACTION' },
+    { title: 'SERVICES.CARD_TITLE', content: 'SERVICES.CARD_CONTENT', tags: ['SERVICES.TAG_1', 'SERVICES.TAG_2', 'SERVICES.TAG_3'], primaryAction: 'SERVICES.PRIMARY_ACTION', secondaryAction: 'SERVICES.SECONDARY_ACTION' },
+    { title: 'SERVICES.CARD_TITLE', content: 'SERVICES.CARD_CONTENT', tags: ['SERVICES.TAG_1', 'SERVICES.TAG_2', 'SERVICES.TAG_3'], primaryAction: 'SERVICES.PRIMARY_ACTION', secondaryAction: 'SERVICES.SECONDARY_ACTION' },
     { title: 'SERVICES.CARD_TITLE', content: 'SERVICES.CARD_CONTENT', tags: ['SERVICES.TAG_1', 'SERVICES.TAG_2', 'SERVICES.TAG_3'], primaryAction: 'SERVICES.PRIMARY_ACTION', secondaryAction: 'SERVICES.SECONDARY_ACTION' }
 
   ];
@@ -41,11 +45,34 @@ export class ServicesComponent implements AfterViewInit {
     if (isPlatformBrowser(this.platformId)) {
       setTimeout(() => {
         const container = this.carouselContainer?.nativeElement;
-        if (!container || !container.querySelector('.swiper-slide')) {
+        
+        if (!container) {
+          console.warn('Swiper: No container found, skipping initialization.');
+          return;
+        }
+  
+        console.log('Swiper container found:', container);
+  
+        const slides = container.querySelectorAll('.swiper-slide');
+        if (!slides.length) {
           console.warn('Swiper: No slides found, skipping initialization.');
           return;
         }
   
+        console.log(`Swiper slides found: ${slides.length}`);
+  
+        // Ensure navigation buttons exist
+        const nextButton = document.querySelector('.swiper-button-next');
+        const prevButton = document.querySelector('.swiper-button-prev');
+  
+        if (!nextButton || !prevButton) {
+          console.error('Swiper navigation buttons not found!');
+          return;
+        }
+  
+        console.log('Swiper navigation buttons found:', { nextButton, prevButton });
+  
+        // Initialize Swiper
         this.swiperInstance = new Swiper(container, {
           modules: [Pagination, Navigation, Autoplay],
           loop: true,
@@ -64,7 +91,11 @@ export class ServicesComponent implements AfterViewInit {
             clickable: true,
           },
           on: {
+            init: () => {
+              console.log('Swiper initialized successfully.');
+            },
             slideChange: () => {
+              console.log(`Swiper slide changed: ${this.swiperInstance.realIndex}`);
               this.updateBulletColors();
             },
           },
@@ -74,6 +105,7 @@ export class ServicesComponent implements AfterViewInit {
       }, 300);
     }
   }
+  
 
   updateBulletColors() {
     const bullets = document.querySelectorAll('.swiper-pagination-bullet');

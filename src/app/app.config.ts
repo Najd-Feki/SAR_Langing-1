@@ -4,9 +4,13 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { provideTranslateService, TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { DetailsComponent } from './details/details.component';
+import { NotFoundComponent } from './notfound/notfound.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) }
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+    {path:'details', component:DetailsComponent},
+    { path: 'stt', component: NotFoundComponent }
+  
 ];
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, "/assets/i18n/", ".json"); 

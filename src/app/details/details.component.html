@@ -1,0 +1,24 @@
+<main>
+    <h1 class="news-title">News Title</h1>
+    <p class="news-date">Oct 28, 2024 | 2:44 PM</p>
+    <div class="image-container">
+        <img [src]="selectedImage" [alt]="selectedAlt" class="main-image">
+    </div>
+
+    <div class="small-images">
+        <img 
+            *ngFor="let image of images" 
+            [src]="image.src" 
+            [alt]="image.alt" 
+            class="thumbnail" 
+            (click)="changeImage(image.src, image.alt)">
+    </div>
+
+    <article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum, velit et pharetra convallis, justo orci cursus nulla, vel consequat ligula arcu eget ex. Donec lacinia lorem nec turpis hendrerit ultricies.</p>
+        <p>Vestibulum sit amet nisi auctor, venenatis eros vel, interdum ligula. Nulla facilisi. Integer sodales suscipit sapien, eget suscipit urna egestas eget. Duis tincidunt urna in lorem cursus, ut dictum libero tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum, velit et pharetra convallis, justo orci cursus nulla, vel consequat ligula arcu eget ex. Donec lacinia lorem nec turpis hendrerit ultricies.</p>
+        <p>Aliquam erat volutpat. Nam suscipit, elit a sodales dictum, purus sapien tempor eros, sed malesuada ligula lectus in lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum sit amet nisi auctor, venenatis eros vel, interdum ligula. Nulla facilisi. Integer sodales suscipit sapien, eget suscipit urna egestas eget. Duis tincidunt urna in lorem cursus, ut dictum libero tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum, velit et pharetra convallis, justo orci cursus nulla, vel consequat ligula arcu eget ex. Donec lacinia lorem nec turpis hendrerit ultricies.Vestibulum sit amet nisi auctor, venenatis eros vel, interdum ligula. Nulla facilisi. Integer sodales suscipit sapien, eget suscipit urna egestas eget. Duis tincidunt urna in lorem cursus, ut dictum libero tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum, velit et pharetra convallis, justo orci cursus nulla, vel consequat ligula arcu eget ex. Donec lacinia lorem nec turpis hendrerit ultricies.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum, velit et pharetra convallis, justo orci cursus nulla, vel consequat ligula arcu eget ex. Donec lacinia lorem nec turpis hendrerit ultricies.</p>
+
+    </article>
+</main>
