@@ -1,0 +1,24 @@
+<section  class="hero-swiper">
+  <div #swiperContainer class="swiper">
+    <div class="swiper-wrapper">
+      <div *ngFor="let slide of slides" class="swiper-slide"
+           [ngClass]="{
+             'green-background': slide.image === 'green',
+             'grey-background': slide.image === 'grey'
+           }">
+        <img *ngIf="slide.image && slide.image !== 'green' && slide.image !== 'grey'" 
+             [src]="slide.image" class="hero-background" alt="Hero background image" />
+             
+        <div class="hero-content">
+          <div class="hero-text-content">
+            <h1 class="hero-title">{{ slide.title | translate }}</h1>
+            <p class="hero-description">{{ slide.description | translate }}</p>
+            <button class="primary-button">{{ 'HERO.BUTTON' | translate }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+
+  </div>
+</section>

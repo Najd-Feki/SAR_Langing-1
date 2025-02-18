@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --nav-bg-light: rgba(255, 255, 255, 1);
+    --nav-text-light: #161616;
+    --nav-hover-light: rgba(0, 0, 0, 0.04);
+    --nav-border-light: rgba(210, 214, 219, 1);
+    --grey-background-light: #F9FAFB;
+    --grey-background-dark: black;
+    --nav-bg-dark: #222222;
+    --nav-text-dark: #ffffff;
+    --nav-hover-dark: rgba(255, 255, 255, 0.1);
+    --nav-border-dark: rgba(255, 255, 255, 0.2);
+  }
+  
+  body.light-theme {
+    --nav-bg: var(--nav-bg-light);
+    --nav-text: var(--nav-text-light);
+    --nav-hover: var(--nav-hover-light);
+    --nav-border: var(--nav-border-light);
+    --services-bg: var(--grey-background-light);
+  }
+  
+  body.dark-theme {
+    --nav-bg: var(--nav-bg-dark);
+    --nav-text: var(--nav-text-dark);
+    --nav-hover: var(--nav-hover-dark);
+    --nav-border: var(--nav-border-dark);
+    --services-bg: var(--grey-background-dark);
+  }
+  
+  html, body {
+      overflow-x: auto;
+      padding: 0;
+  }
+  
