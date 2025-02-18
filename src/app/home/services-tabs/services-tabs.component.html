@@ -1,0 +1,26 @@
+<div class="services-tabs">
+    <div class="tabs">
+      <button
+        *ngFor="let tab of serviceTabs; let i = index"
+        (click)="selectTab(i)"
+        [class.active]="selectedTab === i"
+      >
+        {{ tab.title | translate }}
+      </button>
+    </div>
+  
+    <div class="tab-content">
+      <div class="left">
+        <h2>{{ "SERVICES.TITLE" | translate }}</h2>
+        <p>{{ "SERVICES.DESCRIPTION" | translate }}</p>
+      </div>
+      <div class="right">
+        <div class="service-item" *ngFor="let item of serviceTabs[selectedTab].links">
+          <span class="icon"></span>
+          <span class="text">{{ item }}</span>
+          <span class="arrow">➜</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

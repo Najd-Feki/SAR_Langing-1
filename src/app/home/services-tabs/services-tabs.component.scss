@@ -1,0 +1,124 @@
+.services-tabs {
+    background-color: var(--services-bg);
+    font-family: "IBM Plex Sans Arabic";
+    padding: 40px 5%;
+    color: var(--nav-text);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  
+    .tabs {
+      display: flex;
+      gap: 12px;
+      border-bottom: 2px solid var(--nav-border);
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+  
+      button {
+        background: var(--nav-bg);
+        border: 1px solid var(--nav-border);
+        padding: 12px 20px;
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--nav-text);
+        border-radius: 8px 8px 0 0;
+        transition: background 0.3s, border 0.3s;
+  
+        &.active {
+          background: #1b8354;
+          border-bottom: 2px solid var(--nav-hover);
+          color: white;
+        }
+  
+        &:hover {
+          background: var(--nav-hover);
+          color: white;
+        }
+      }
+    }
+  
+    .tab-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+  
+      .left {
+        flex: 1;
+        padding-right: 20px;
+  
+        h2 {
+          font-size: 22px;
+          font-weight: bold;
+          color: var(--nav-text);
+          margin-bottom: 12px;
+        }
+  
+        p {
+          font-size: 16px;
+          color: var(--nav-text);
+          line-height: 1.5;
+        }
+      }
+  
+      .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+  
+        .service-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          background: var(--nav-bg);
+          padding: 14px;
+          border-radius: 8px;
+          cursor: pointer;
+          border: 1px solid var(--nav-border);
+          transition: background 0.3s, transform 0.2s;
+  
+          .icon {
+            width: 24px;
+            height: 24px;
+            background: url('/assets/icons/file.svg') no-repeat center;
+            background-size: contain;
+            flex-shrink: 0;
+          }
+  
+          .text {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--nav-text);
+          }
+  
+          .arrow {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--nav-text);
+          }
+  
+          &:hover {
+            background: var(--nav-hover);
+            transform: translateY(-3px);
+            color: white;
+  
+            .text,
+            .arrow {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .tab-content {
+        flex-direction: column;
+  
+        .left {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  

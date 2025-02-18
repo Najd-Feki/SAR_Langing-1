@@ -1,8 +1,10 @@
 .about-us {
-  background-color: #ffffff;
+    background-color: var(--nav-bg);
   margin: 40px auto;
+  margin-top: 0;
+  margin-bottom: 0;
   text-align: center;
-  font-family: IBM Plex Sans Arabic;
+  font-family: "IBM Plex Sans Arabic";
     padding: 20px;
 
   .container {
@@ -10,6 +12,7 @@
       margin: 0 auto;
       width: 100%; 
       padding: 0 20px;
+      color: var(--nav-text);
       @media (max-width: 991px) {
           padding:0px;
       }
@@ -22,6 +25,7 @@
       gap: 40px;
       margin-bottom: 40px;
       flex-wrap: wrap;
+      
   }
 
   .image-content {
@@ -42,6 +46,8 @@
           font-weight: bold;
           color: #000;
           line-height: 38px;
+          color: var(---nav-text);
+
       }
 
       p {
@@ -58,6 +64,7 @@
 
       .cta-wrapper {
         display: flex;
+
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -68,7 +75,7 @@
         padding: 8px 16px;
         font-size: 14px;
         font-weight: 500;
-        color: #000;
+        color: var(---nav-text);
         background-color: transparent;
         border: 1px solid;
         border-radius: 6px;
@@ -126,6 +133,7 @@
               color: #0b5345;
               line-height: 48px;
               font-weight: lighter;
+              
           }
 
           p {

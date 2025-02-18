@@ -137,15 +137,18 @@ export class ServicesComponent implements AfterViewInit {
   }
 
   updateBulletColors() {
-    const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+    const bullets = document.querySelectorAll('.swiper-pagination');
     if (!bullets || !this.swiperInstance) return;
 
     bullets.forEach((bullet, index) => {
       if (index === this.swiperInstance.realIndex) {
         (bullet as HTMLElement).style.backgroundColor = '#1B8354';
+        (bullet as HTMLElement).style.width = '16px';
+        (bullet as HTMLElement).style.height = '16px';
       } else {
         (bullet as HTMLElement).style.backgroundColor = 'rgb(255, 255, 255)';
-      }
+        (bullet as HTMLElement).style.width = '16px';
+        (bullet as HTMLElement).style.height = '16px'; }
     });
   }
 }
