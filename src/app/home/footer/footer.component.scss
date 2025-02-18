@@ -13,17 +13,18 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 20px;
 
     .footer-column {
-      flex: 1;
+      flex: 4;
 
       h3 {
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 16px;
+        font-weight: 500;
         margin-bottom: 10px;
-        letter-spacing: 1.6;
+        padding-bottom: 8px;
+        letter-spacing: 1.6px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       }
 
       ul {
@@ -50,12 +51,13 @@
         display: flex;
         gap: 10px;
         margin-top: 10px;
-
+        
         a {
           display: inline-block;
           width: 24px;
           height: 24px;
-
+          padding: 5px;
+          border : 1px solid rgba(255, 255, 255, 0.2);
           img {
             width: 100%;
             height: 100%;
@@ -66,12 +68,12 @@
   }
 
   .footer-bottom {
-    text-align: center;
+    text-align: start;
     margin-top: 20px;
 
     .links {
       display: flex;
-      justify-content: center;
+      justify-content: start;
       gap: 20px;
       margin-bottom: 10px;
 
@@ -110,35 +112,33 @@
   .footer {
     padding-left: 32px;
     padding-right: 40px;
-    text-align: start; /* Center all text on mobile */
+    text-align: start; 
   }
 
   .footer-columns {
-    flex-direction: column; /* Stack columns */
+    flex-direction: column;
     align-items: start;
-    gap: 20px; /* Add spacing between sections */
+    gap: 20px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
   }
 
   .footer-column {
     width: 100%;
-    max-width: 300px; /* Keep it balanced */
+    max-width: 300px; 
   }
 
   .footer-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
+    display: none
   }
 
   .footer-bottom .links {
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: column;
     gap: 10px;
   }
 
   .footer-bottom .footer-logos {
-    flex-direction: column; /* Stack logos */
+    flex-direction: column;
     gap: 10px;
   }
 }
