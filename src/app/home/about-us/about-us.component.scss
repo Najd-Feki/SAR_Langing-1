@@ -51,10 +51,10 @@
       }
 
       p {
-        font-size: var(--font-size-normal);
+        font-size: var(--font-size-mediumM);
           color: var(--nav-text);
+          text-align: justify;
           margin: 10px 0 20px;
-          width: 964px;
           @media screen and (max-width: 768px) {
             margin: 0;
             width: 100%;

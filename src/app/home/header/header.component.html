@@ -27,13 +27,8 @@
           
       </div>
       
-           <div class="actions">
-             <button class="details-button" (click)="goToDetails()">Details</button>
-      
-            </div>
-            <button (click)="toggleTheme()" class="theme-toggle-btn">
-              <span class="toggle-circle"></span>
-            </button>
+          
+          
       
             <div class="hamburger-wrapper">
 
@@ -41,30 +36,38 @@
                 <img loading="lazy" src="/assets/icons/menu-01.svg" class="hamburger-icon" alt="Menu" />
               </button>
              
-        <button class="header-action-1" (click)="toggleSearch()" aria-label="Search">
-          <span class="leading-icon" aria-hidden="true"></span>
-          <span class="tab-title-2">{{ 'SEARCH' | translate }}</span>
-        </button>
-        <div class="language-container">
-          <button class="header-action-2" aria-label="Switch Language" (click)="toggleLanguageDropdown()">
-              <span class="lang-icon" aria-hidden="true"></span>
-              <span class="tab-title-3">{{ selectedLangLabel }}</span>
-          </button>
-          <ul class="language-dropdown" *ngIf="isLangDropdownOpen">
-              <li *ngFor="let lang of languages" (click)="changeLanguage(lang.code)">
-                  {{ lang.label }}
-              </li>
-          </ul>
-      </div>
-      
-         
-        <button class="header-action-3" aria-label="Login">
-          <span class="user" aria-hidden="true"></span>
-          <span class="tab-title-4">{{ 'LOGIN' | translate }}</span>
-        </button>
         
       </div>
+      <div class="actions menu-items active">
+        <button class="details-button" (click)="goToDetails()">Details</button>
+
+            <button (click)="toggleTheme()" class="theme-toggle-btn">
+              <span class="toggle-circle"></span>
+            </button>
+   
+      <button class="header-action-1" (click)="toggleSearch()" aria-label="Search">
+        <span class="leading-icon" aria-hidden="true"></span>
+        <span class="tab-title-2">{{ 'SEARCH' | translate }}</span>
+      </button>
+      <div class="language-container">
+        <button class="header-action-2" aria-label="Switch Language" (click)="toggleLanguageDropdown()">
+            <span class="lang-icon" aria-hidden="true"></span>
+            <span class="tab-title-3">{{ selectedLangLabel }}</span>
+        </button>
+        <ul class="language-dropdown" *ngIf="isLangDropdownOpen">
+            <li *ngFor="let lang of languages" (click)="changeLanguage(lang.code)">
+                {{ lang.label }}
+            </li>
+        </ul>
+    </div>
+    <button class="header-action-3" aria-label="Login">
+      <span class="user" aria-hidden="true"></span>
+      <span class="tab-title-4">{{ 'LOGIN' | translate }}</span>
+    </button>
+  </div>
+       
     
+      
         <div class="font-size-controls">
           <button (click)="decreaseFontSize()">- </button>
           <button (click)="increaseFontSize()">+ </button>

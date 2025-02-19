@@ -91,13 +91,22 @@ export class HeaderComponent {
     if (this.isSearchOpen && searchBox && !searchBox.contains(event.target as Node)) {
       this.closeSearch();
     }
-  }
-  toggleMenu() {
+  }toggleMenu() {
     if (this.isBrowser) {
-      const menu = document.querySelector('.menu-items');
+      const menu = document.querySelector('.menu-items') as HTMLElement;
+      const actions = document.querySelector('.actions') as HTMLElement;
+  
       if (menu) {
         menu.classList.toggle('active');
       }
+  
+      if (actions) {
+        actions.classList.toggle('active');
+      }
+  
+      console.log('Menu Items Active:', menu?.classList.contains('active'));
+      console.log('Actions Active:', actions?.classList.contains('active'));
     }
   }
+  
 }
