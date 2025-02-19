@@ -4,6 +4,7 @@ import { CommonModule, isPlatformBrowser, NgClass, NgIf } from '@angular/common'
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ThemeService } from '../../../theme.service';
 import { Router } from '@angular/router';
+import { FontSizeService } from '../../font-size.service';
 
 @Component({
   selector: 'app-header',
@@ -33,7 +34,7 @@ export class HeaderComponent {
     { code: 'en', label: 'English'   },
   ];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,private router: Router , public  translate: TranslateService , public themeService: ThemeService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,private router: Router , private fontSizeService: FontSizeService , public  translate: TranslateService , public themeService: ThemeService) {
     this.isBrowser = isPlatformBrowser(this.platformId); 
 
   
@@ -69,7 +70,13 @@ export class HeaderComponent {
     this.selectedLangLabel = lang === 'ar' ? 'English' : 'عربي';
   }
 
+  increaseFontSize() {
+    this.fontSizeService.increaseFontSize();
+  }
 
+  decreaseFontSize() {
+    this.fontSizeService.decreaseFontSize();
+  }
   toggleSearch() {
     this.isSearchOpen = !this.isSearchOpen;
   }

@@ -11,7 +11,7 @@
       border-bottom: 2px solid var(--nav-border);
       padding-bottom: 12px;
       margin-bottom: 24px;
-  
+
       button {
         background: var(--nav-bg);
         border: 1px solid var(--nav-border);
@@ -21,7 +21,8 @@
         color: var(--nav-text);
         border-radius: 8px 8px 0 0;
         transition: background 0.3s, border 0.3s;
-  
+        font-size: var(--font-size-normal);
+
         &.active {
           background: #1b8354;
           border-bottom: 2px solid var(--nav-hover);

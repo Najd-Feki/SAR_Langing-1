@@ -61,7 +61,7 @@
     margin: auto 0;
     align-items: center;
     gap: 16px;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-xsmall);
     color: #6c737f;
     text-align: right;
     line-height: 1;
@@ -104,7 +104,7 @@
     display: flex;
     min-width: 240px;
     margin: auto 0;
-    font-size: var(--font-size-normal);
+    font-size: var(--font-size-small);
     color: #161616;
     justify-content: start;
     flex-wrap: wrap;
@@ -161,7 +161,7 @@
     min-width: 240px;
     margin: auto 0;
     align-items: center;
-    font-size: var(--font-size-normal);
+    font-size: var(--font-size-small);
     color: #161616;
     white-space: nowrap;
     justify-content: end;
@@ -248,7 +248,7 @@
   .tab-title-4 {
     align-self: stretch;
     margin: auto 0;
-    font-size: var(--font-size-normal);
+    font-size: var(--font-size-xsmall);
   }
   @media (max-width: 991px) {
     .tab-title-2,
@@ -451,5 +451,53 @@
   .menu-items.active {
     display: flex;
     position: absolute;
+  }
+}
+.font-size-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 10%;
+  @media screen and (max-width: 991px) {
+    left:25%
+  }
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  padding: 10px 20px;
+  background: var(--nav-bg);
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+
+  button {
+    background: linear-gradient(135deg, #1B8354, #6c737f);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    min-height: 50px;
+
+    &:hover {
+      background: linear-gradient(135deg, #0056b3, #004094);
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+    }
   }
 }

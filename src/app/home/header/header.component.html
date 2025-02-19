@@ -15,6 +15,11 @@
             <h1 class="platform-logo">{{ 'HEADER' | translate }}</h1>
           </a>
         </div>
+        <div class="font-size-controls">
+          <button (click)="decreaseFontSize()">- </button>
+          <button (click)="increaseFontSize()">+ </button>
+        </div>
+        
         <div class="hamburger-wrapper">
 
         <button class="hamburger-menu"  (click)="toggleMenu()" aria-label="Open menu">
