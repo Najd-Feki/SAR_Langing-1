@@ -48,10 +48,10 @@ export class ArticlesNewsComponent {
     container.scrollTo({ left: cardWidth * this.currentSlide, behavior: 'smooth' });
   }
   isPrevActive(): boolean {
-  return this.currentSlide > 0;
-}
+    return this.currentSlide > 0;
+  }
 
-isNextActive(): boolean {
-  return this.currentSlide < this.articles.length - 1;
-}
+  isNextActive(): boolean {
+    return this.currentSlide < this.articles.length - 1;
+  }
 }

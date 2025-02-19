@@ -9,7 +9,7 @@
     "Articles":"Articles",
     "HERO": {
       "TITLE_1": "Hero Section",
-      "DESCRIPTION_1": "Here you can add a brief description about the purpose of the portal followed with a call to action button and an image or an illustration on the left-hand side.Here you can add a brief description about the purpose of the portal followed with a call to action button and an image or an illustration on the left-hand side.",
+      "DESCRIPTION_1": " Here you can add a brief description about the purpose of the portal followed with a call to action button and an image or an illustration on the left-hand side.",
       "TITLE_2": "Hero Section 2",
       "DESCRIPTION_2": "Another description for this slide.",
       "TITLE_3": "Green Background Slide",
@@ -45,7 +45,7 @@
         "SECTION_DESCRIPTION": "Here you can add a brief description about the purpose of the portal.",
         "VIEW_ALL": "View all",
         "TITLE": "The Title of the News Card in Two Lines",
-        "DESCRIPTION": "Here you can include a brief description of the headline in four lines.",
+        "DESCRIPTION": "Here you can include a brief description of the headline in four lines.Here you can include a brief description of the headline in four lines",
         "READ_MORE": "Read More",
         "IMAGE_ALT": "News Image"
     },
