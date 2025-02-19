@@ -15,24 +15,7 @@
             <h1 class="platform-logo">{{ 'HEADER' | translate }}</h1>
           </a>
         </div>
-        <div class="font-size-controls">
-          <button (click)="decreaseFontSize()">- </button>
-          <button (click)="increaseFontSize()">+ </button>
-        </div>
-        
-        <div class="hamburger-wrapper">
-
-        <button class="hamburger-menu"  (click)="toggleMenu()" aria-label="Open menu">
-          <img loading="lazy" src="/assets/icons/menu-01.svg" class="hamburger-icon" alt="Menu" />
-        </button>
-        <button class="details-button" (click)="goToDetails()">Details</button>
-
-      </div>
-      <button (click)="toggleTheme()" class="theme-toggle-btn">
-        <span class="toggle-circle"></span>
-      </button>
-
-      
+        <div class="menu-wrapper">
         <ul class="menu-items" role="menubar">
           <li *ngFor="let item of menuItems; let i = index" role="none">
             <button class="header-menu-item" role="menuitem" aria-haspopup="true">
@@ -40,7 +23,24 @@
               <span class="arrow-down-01" aria-hidden="true"></span>
             </button>
           </li>
+        </ul> 
+          
+      </div>
+      
            <div class="actions">
+             <button class="details-button" (click)="goToDetails()">Details</button>
+      
+            </div>
+            <button (click)="toggleTheme()" class="theme-toggle-btn">
+              <span class="toggle-circle"></span>
+            </button>
+      
+            <div class="hamburger-wrapper">
+
+              <button class="hamburger-menu"  (click)="toggleMenu()" aria-label="Open menu">
+                <img loading="lazy" src="/assets/icons/menu-01.svg" class="hamburger-icon" alt="Menu" />
+              </button>
+             
         <button class="header-action-1" (click)="toggleSearch()" aria-label="Search">
           <span class="leading-icon" aria-hidden="true"></span>
           <span class="tab-title-2">{{ 'SEARCH' | translate }}</span>
@@ -62,8 +62,17 @@
           <span class="user" aria-hidden="true"></span>
           <span class="tab-title-4">{{ 'LOGIN' | translate }}</span>
         </button>
+        
       </div>
-        </ul>
+    
+        <div class="font-size-controls">
+          <button (click)="decreaseFontSize()">- </button>
+          <button (click)="increaseFontSize()">+ </button>
+        </div>
+        
+     
+      
+   
       </div>
 
      

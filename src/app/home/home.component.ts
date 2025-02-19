@@ -9,7 +9,7 @@ import { ServicesComponent } from './services/services.component';
 @Component({
   selector: 'app-home',
   standalone: true, 
-  imports: [  HeroComponent,  AboutUsComponent ,ServicesTabsComponent,  ServicesComponent, PartnerComponent , ArticlesNewsComponent],
+  imports: [  HeroComponent,  AboutUsComponent ,ServicesTabsComponent,   PartnerComponent , ArticlesNewsComponent],
     templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
