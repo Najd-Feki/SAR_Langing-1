@@ -42,7 +42,7 @@
       position: relative;
       
       h2 {
-        font-size: var(--font-size-large);
+        font-size: var(--font-size-xl);
         font-weight: bold;
           color: #000;
           line-height: 38px;
@@ -51,13 +51,14 @@
       }
 
       p {
-        font-size: var(--font-size-mediumM);
+        font-size: var(--font-size-large);
           color: var(--nav-text);
           text-align: justify;
           margin: 10px 0 20px;
           @media screen and (max-width: 768px) {
             margin: 0;
             width: 100%;
+            text-align: start;
 
           }
       }

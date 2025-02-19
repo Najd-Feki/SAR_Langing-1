@@ -79,8 +79,27 @@ export class HeaderComponent {
   }
   toggleSearch() {
     this.isSearchOpen = !this.isSearchOpen;
+  
+    if (this.isSearchOpen) {
+      this.closeMenu();
+    }
   }
-
+  
+  closeMenu() {
+    if (this.isBrowser) {
+      const menu = document.querySelector('.menu-items') as HTMLElement;
+      const actions = document.querySelector('.actions') as HTMLElement;
+  
+      if (menu) {
+        menu.classList.remove('active');
+      }
+  
+      if (actions) {
+        actions.classList.remove('active');
+      }
+    }
+  }
+  
   closeSearch() {
     this.isSearchOpen = false;
   }

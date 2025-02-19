@@ -181,14 +181,14 @@
       background: var(--nav-bg);
       padding: 10px;
       position: absolute;
-      top: 72px; /* Adjust based on header height */
-      right: 0;
+      top: 72px; 
       z-index: 1000;
+      padding-left: 24px;
       width: 100%;
     }
   
     .actions.active {
-      display: flex;
+      display: block;
     }
   }
 
@@ -360,6 +360,8 @@
   .theme-toggle-btn {
     width: 60px;
     height: 30px;
+    margin-top: 2%;
+    margin-left: 2%;
     background: var(--nav-bg);
     border-radius: 50px;
     border: 1px solid var(--nav-border);
@@ -368,7 +370,7 @@
     transition: background 0.3s ease, border 0.3s ease;
     display: flex;
     align-items: center;
-    padding: 2px;
+    padding: 21px;
   }
   
   .toggle-circle {
@@ -458,7 +460,7 @@
   .menu-items {
     display: none;
     flex-direction: column;
-    top: 60px;
+    top: 59vh;
     background: var(--nav-bg);
     width: 100%;
     left: 0;
