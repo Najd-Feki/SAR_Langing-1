@@ -15,11 +15,12 @@
         <p>{{ "SERVICES.DESCRIPTION" | translate }}</p>
       </div>
       <div class="right">
-        <div class="service-item" *ngFor="let item of serviceTabs[selectedTab].links">
+        <div class="service-item" *ngFor="let item of serviceTabs[selectedTab].links" (click)="goToDetails()">
           <span class="icon"></span>
           <span class="text">{{ item }}</span>
           <span class="arrow">➜</span>
         </div>
+        
       </div>
     </div>
   </div>

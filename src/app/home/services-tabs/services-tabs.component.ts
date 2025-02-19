@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -11,6 +12,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class ServicesTabsComponent {
     constructor(
       public translate: TranslateService,
+      private router: Router
     ) {}
   selectedTab = 0;
 
@@ -36,7 +38,9 @@ export class ServicesTabsComponent {
       links: ['Feature X', 'Feature Y'],
     },
   ];
-
+  goToDetails() {
+    this.router.navigate(['/details']);
+  }
   selectTab(index: number) {
     this.selectedTab = index;
   }
