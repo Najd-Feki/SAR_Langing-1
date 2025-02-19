@@ -101,14 +101,14 @@
       }
 
       h3 {
-        font-size: 18px;
+        font-size: var(--font-size-medium);
         font-weight: bold;
         color: var(--nav-text);
         margin-bottom: 8px;
       }
 
       p {
-        font-size: 14px;
+        font-size: var(--font-size-small);
         color: var(--nav-text);
         margin-bottom: 12px;
       }
@@ -120,7 +120,7 @@
         margin-bottom: 16px;
 
         .tag {
-          font-size: 12px;
+          font-size: var(--font-size-xsmall);
           padding: 4px 8px;
           border-radius: 6px;
           font-weight: 500;
@@ -137,8 +137,7 @@
           padding: 8px 16px;
           border-radius: 6px;
           cursor: pointer;
-          font-size: 14px;
-          transition: 0.3s;
+          font-size: var(--font-size-small);
         }
 
         .btn-secondary {
@@ -173,7 +172,7 @@
     border-radius: 50%;
     width: 32px;
     height: 32px;
-    font-size: 16px;
+    font-size: var(--font-size-normal);
     cursor: pointer;
     transition: 0.3s;
     position: absolute;
@@ -192,10 +191,10 @@
 
       .text-content {
         h2 {
-          font-size: 20px;
+          font-size: var(--font-size-mediumM);
         }
         p {
-          font-size: 14px;
+          font-size: var(--font-size-small);
         }
       }
     }
@@ -226,11 +225,11 @@
     height: 48px;
     display: flex;
     color: black;
-    font-size: 20px;
+    font-size: var(--font-size-mediumM);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 10;
     &::after {
-      font-size: 16px;
+      font-size: var(--font-size-normal);
       color: white;
     }
   }
@@ -247,8 +246,8 @@
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 16px;
-    position: relative;
+    font-size: var(--font-size-normal);
+      position: relative;
     z-index: 10;
     height: 48px;
     width: 120px;
