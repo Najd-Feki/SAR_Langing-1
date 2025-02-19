@@ -110,10 +110,7 @@ export class ServicesComponent implements AfterViewInit {
         this.swiperInstance = new Swiper(container, {
           modules: [Pagination, Navigation, Autoplay],
           loop: true,
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-          },
+
           slidesPerView: 4,
           spaceBetween: 16,
           navigation: {
@@ -148,7 +145,8 @@ export class ServicesComponent implements AfterViewInit {
       } else {
         (bullet as HTMLElement).style.backgroundColor = 'rgb(255, 255, 255)';
         (bullet as HTMLElement).style.width = '16px';
-        (bullet as HTMLElement).style.height = '16px'; }
+        (bullet as HTMLElement).style.height = '16px';
+      }
     });
   }
 }
