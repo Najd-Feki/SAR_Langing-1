@@ -44,7 +44,6 @@
     margin: auto 0;
     align-items: center;
     gap: 16px;
-    justify-content: space-evenly;
         flex-wrap: wrap;
     flex: 1;
     flex-shrink: 1;
@@ -182,14 +181,19 @@
       background: var(--nav-bg);
       padding: 10px;
       position: absolute;
-      top: 2px; 
+      top: 72px; 
       z-index: 1000;
       padding-left: 24px;
       width: 100%;
     }
   
     .actions.active {
-      display: block;
+      display: flex !important;
+    }
+    
+    .menu-items.active {
+      display: flex;
+      border: 2px solid blue; /* Temporary debug style */
     }
   }
 

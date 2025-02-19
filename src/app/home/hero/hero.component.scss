@@ -77,8 +77,8 @@
   font-family: "IBM Plex Sans Arabic";
   @media screen and (max-width: 991px) {
     font-size: var(--font-size-xxxl);
-    margin-top: 100px;
-    margin-bottom: 24px;
+    margin-top: 20px;
+    margin-bottom: 4px;
   }
 }
 .hero-description {
@@ -90,6 +90,8 @@
   font-size: var(--font-size-mediumM);
   @media screen and (max-width: 991px) {
     line-height: 1.64;
+    margin-bottom: 5px;
+
   }
 }
 .swiper-pagination {

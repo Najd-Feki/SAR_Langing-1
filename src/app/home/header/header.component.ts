@@ -114,7 +114,8 @@ export class HeaderComponent {
   
       if (menu && actions) {
         const isActive = menu.classList.contains('active');
-  
+        console.log('Menu toggle clicked. Active:', isActive);
+        
         if (isActive) {
           menu.classList.remove('active');
           actions.classList.remove('active');
@@ -122,10 +123,12 @@ export class HeaderComponent {
           menu.classList.add('active');
           actions.classList.add('active');
         }
+      } else {
+        console.error('Menu or Actions not found');
       }
-
     }
   }
+  
   
   
 }
