@@ -181,19 +181,14 @@
       background: var(--nav-bg);
       padding: 10px;
       position: absolute;
-      top: 72px; 
+      top: 2px; 
       z-index: 1000;
       padding-left: 24px;
       width: 100%;
     }
   
     .actions.active {
-      display: flex !important;
-    }
-    
-    .menu-items.active {
-      display: flex;
-      border: 2px solid blue; /* Temporary debug style */
+      display: block;
     }
   }
 

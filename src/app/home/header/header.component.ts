@@ -107,28 +107,28 @@ export class HeaderComponent {
       this.closeSearch();
     }
   }
-  toggleMenu() {
-    if (this.isBrowser) {
-      const menu = document.querySelector('.menu-items') as HTMLElement;
-      const actions = document.querySelector('.actions') as HTMLElement;
-  
-      if (menu && actions) {
-        const isActive = menu.classList.contains('active');
-        console.log('Menu toggle clicked. Active:', isActive);
-        
-        if (isActive) {
-          menu.classList.remove('active');
-          actions.classList.remove('active');
-        } else {
-          menu.classList.add('active');
-          actions.classList.add('active');
-        }
+toggleMenu() {
+  if (this.isBrowser) {
+    const menu = document.querySelector('.menu-items') as HTMLElement;
+    const actions = document.querySelector('.actions') as HTMLElement;
+
+    if (menu && actions) {
+      const isActive = menu.classList.contains('active');
+      console.log('Menu toggle clicked. Active:', isActive);
+      
+      if (isActive) {
+        menu.classList.remove('active');
+        actions.classList.remove('active');
       } else {
-        console.error('Menu or Actions not found');
+        menu.classList.add('active');
+        actions.classList.add('active');
       }
+    } else {
+      console.error('Menu or Actions not found');
     }
   }
-  
+}
+
   
   
 }
