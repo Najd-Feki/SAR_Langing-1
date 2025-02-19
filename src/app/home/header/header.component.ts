@@ -115,7 +115,7 @@ toggleMenu() {
     if (menu && actions) {
       const isActive = menu.classList.contains('active');
       console.log('Menu toggle clicked. Active:', isActive);
-      
+      console.log("actions", actions)
       if (isActive) {
         menu.classList.remove('active');
         actions.classList.remove('active');

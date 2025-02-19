@@ -181,14 +181,16 @@
       background: var(--nav-bg);
       padding: 10px;
       position: absolute;
-      top: 2px; 
+      top: 72px; 
       z-index: 1000;
       padding-left: 24px;
       width: 100%;
     }
   
     .actions.active {
-      display: block;
+      display: block !important;
+      flex-direction: column;
+
     }
   }
 
@@ -453,14 +455,11 @@
 
   
   }
-.actions{
-  flex-direction: column;
 
-}
   .menu-items {
     display: none;
     flex-direction: column;
-    top: 59vh;
+    top: 55vh;
     background: var(--nav-bg);
     width: 100%;
     left: 0;
