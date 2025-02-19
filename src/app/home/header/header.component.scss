@@ -138,7 +138,8 @@
     cursor: pointer;
     font: inherit;
     color: inherit;
-    color: var(--nav-text);
+  width:112px;
+  color: var(--nav-text);
   }
   .header-menu-item:hover {
     background-color: rgba(0, 0, 0, 0.04);
@@ -181,7 +182,7 @@
       background: var(--nav-bg);
       padding: 10px;
       position: absolute;
-      top: 72px; 
+      top: 2px; 
       z-index: 1000;
       padding-left: 24px;
       width: 100%;
@@ -520,4 +521,42 @@
       box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
     }
   }
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: var(--nav-text);
+}
+.menu-item-container {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--nav-bg);
+  border: 1px solid var(--nav-border);
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  z-index: 1000;
+  min-width: 80px;
+}
+
+.menu-item-container:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: var(--nav-text);
+}
+
+.dropdown-menu li:hover {
+  background-color: var(--nav-hover);
 }

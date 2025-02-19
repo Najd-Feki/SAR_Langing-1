@@ -16,14 +16,21 @@
           </a>
         </div>
         <div class="menu-wrapper">
-        <ul class="menu-items" role="menubar">
-          <li *ngFor="let item of menuItems; let i = index" role="none">
-            <button class="header-menu-item" role="menuitem" aria-haspopup="true">
-              <span class="tab-title">{{ item.key | translate }}</span>
-              <span class="arrow-down-01" aria-hidden="true"></span>
-            </button>
-          </li>
-        </ul> 
+          <ul class="menu-items" role="menubar">
+            <li *ngFor="let item of menuItems" class="menu-item-container" role="none">
+              <button class="header-menu-item" role="menuitem" aria-haspopup="true">
+                <span class="tab-title">{{ item.key | translate }}</span>
+                <span class="arrow-down-01" aria-hidden="true"></span>
+              </button>
+              
+              <ul class="dropdown-menu" *ngIf="item.subItems">
+                <li *ngFor="let subItem of item.subItems" (click)="handleSubItemClick(subItem)">
+                  {{ subItem.key | translate }}
+                </li>
+              </ul>
+            </li>
+          </ul>
+          
           
       </div>      
             <div class="hamburger-wrapper">
@@ -35,10 +42,10 @@
         
       </div>
       <div class="actions  ">
-
+<!-- 
             <button (click)="toggleTheme()" class="theme-toggle-btn">
               <span class="toggle-circle"></span>
-            </button>
+            </button> -->
    
       <button class="header-action-1" (click)="toggleSearch()" aria-label="Search">
         <span class="leading-icon" aria-hidden="true"></span>
@@ -62,12 +69,12 @@
   </div>
        
     
-      
+<!--       
         <div class="font-size-controls">
           <button (click)="decreaseFontSize()">- </button>
           <button (click)="increaseFontSize()">+ </button>
         </div>
-        
+         -->
      
       
    

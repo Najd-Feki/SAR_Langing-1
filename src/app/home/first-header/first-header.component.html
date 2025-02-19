@@ -1,0 +1,60 @@
+<nav class="nav-header" role="navigation" aria-label="Secondary navigation">
+    <div class="header-content">
+      <div class="content">
+        <div class="weather-item" role="status" aria-label="Weather information">
+          <div class="weather-icon" aria-hidden="true">
+            <img src="assets/icons/cloud.svg" alt="Weather Icon" />
+          </div>
+          <span class="weather-label">Cloudy</span>
+        </div>
+  
+          <div class="datetime-item" role="status" aria-label="Current date">
+            <div class="calendar-icon" aria-hidden="true">
+              <img src="/assets/icons/calendar-04.svg" alt="Calendar Icon" />
+            </div>
+            <span class="datetime-label">3-Sep-2024</span>
+          </div>
+  
+          <div class="datetime-item" role="status" aria-label="Current time">
+            <div class="time-icon" aria-hidden="true">
+              <img src="/assets/icons/time-04.svg" alt="Time Icon" />
+            </div>
+            <span class="datetime-label">2:30 PM</span>
+          </div>
+  
+        <div class="location-item" role="status" aria-label="Current location">
+          <div class="location-icon" aria-hidden="true">
+            <img src="assets/icons/location.svg" alt="Location Icon" />
+          </div>
+          <span class="location-label">Al-Riyadh</span>
+        </div>
+      </div>
+  
+      <div class="actions" role="toolbar" aria-label="Header actions">
+        <button class="action-button" aria-label="Action 1">
+          <div class="button-icon" aria-hidden="true" style="padding-bottom:8px;">
+            <img src="assets/icons/mic-icon.svg" alt="Action 1 Icon" />
+          </div>
+        </button>
+        <button class="action-button" aria-label="Action 2">
+          <div class="button-icon" (click)="increaseFontSize()" aria-hidden="true">
+            <img src="assets/icons/zoomin.svg" alt="Action 2 Icon" />
+          </div>
+        </button>
+        <button class="action-button" aria-label="Action 3">
+          <div class="button-icon"  (click)="decreaseFontSize()" aria-hidden="true">
+            <img src="assets/icons/zoomout.svg" alt="Action 3 Icon" />
+          </div>
+        </button>
+        <button class="action-button" (click)="toggleTheme()" aria-label="Action 4">
+          <div class="button-icon" aria-hidden="true">
+            <img src="assets/icons/eye.svg" alt="Action 4 Icon" />
+          </div>
+        </button>
+      </div>
+    </div>
+  
+    <div class="divider" aria-hidden="true">
+      <div class="divider-line"></div>
+    </div>
+  </nav>

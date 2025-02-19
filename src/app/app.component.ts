@@ -4,11 +4,12 @@ import { HeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { isPlatformBrowser } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
+import { FirstHeaderComponent } from './home/first-header/first-header.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet , HeaderComponent, FooterComponent],
+  imports: [RouterOutlet , HeaderComponent,FirstHeaderComponent, FooterComponent],
   
   standalone: true,
   templateUrl: './app.component.html',

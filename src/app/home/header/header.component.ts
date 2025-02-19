@@ -19,14 +19,11 @@ export class HeaderComponent {
   isSearchOpen: boolean = false;
   selectedLangLabel = 'عربي'; 
   menuItems = [
-    // this is for the elements of the menu items , it can be changed to be dynamic
-    { key: 'item1' },
-    { key: 'item1' },
-    { key: 'item1' },
-    { key: 'item1' },
-    { key: 'item1' },
-    { key: 'item1' },
-    { key: 'item1' }
+    { key: 'ITEM', subItems: [{ key: 'SUBMENU_1' }, { key: 'SUBMENU_2' }] },
+    { key: 'ITEM', subItems: [{ key: 'SUBMENU_3' }, { key: 'SUBMENU_4' }] },
+    { key: 'ITEM', subItems: [{ key: 'SUBMENU_5' }, { key: 'SUBMENU_6' }] },
+    { key: 'ITEM', subItems: [{ key: 'SUBMENU_7' }, { key: 'SUBMENU_8' }] },
+
   ];
     languages = [
     { code: 'ar', label:'عربي' },
@@ -72,6 +69,9 @@ export class HeaderComponent {
 
   decreaseFontSize() {
     this.fontSizeService.decreaseFontSize();
+  }
+  handleSubItemClick(subItem: any) {
+    console.log('Sub-item clicked:', subItem);
   }
   toggleSearch() {
     this.isSearchOpen = !this.isSearchOpen;
