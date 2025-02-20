@@ -1,9 +1,10 @@
 .articles-news {
   background-color: var(--articles-bg);
   padding: 40px 80px;
+  overflow-y: hidden;
   overflow-x: hidden;
   white-space: nowrap;
-  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
 .articles-news .container {
@@ -30,7 +31,6 @@
   font-size: var(--font-size-normal);
   color: var(--nav-text);
   max-width: 600px;
-  
 }
 
 .articles-news .header .view-all {
@@ -55,12 +55,10 @@
   gap: 20px;
   overflow-x: hidden;
   width: 100vw;
-  padding:0px
-
-  
+  padding: 0px;
 }
 .articles-news .articles-grid::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 .articles-news .article-card {
   background: var(--articles-bg);
@@ -71,8 +69,8 @@
   padding-right: 2%;
   display: flex;
   flex-direction: column;
-  min-width: 20%;
-  max-width:20%;
+  min-width: 450px;
+  max-width: 20%;
 }
 .nav-btn-inactive {
   background: #F9FAFB !important;
@@ -81,7 +79,7 @@
   cursor: not-allowed;
 }
 .articles-news .article-card .article-image {
-  height: 250px;
+  height: 180px;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 12%;
@@ -109,19 +107,18 @@
   color: var(--nav-text);
   margin-bottom: 12px;
   line-height: 24px;
-  word-wrap: break-word; 
-  overflow-wrap: break-word; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   white-space: normal;
-  max-width: 100%; 
+  max-width: 100%;
 }
-
 
 .articles-news .article-card .article-content .read-more {
   padding: 8px 16px;
   font-size: var(--font-size-normal);
   font-weight: 500;
   color: #fff;
-  background-color: #1B8354;
+  background-color: #1b8354;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -148,8 +145,6 @@
     scroll-snap-type: x mandatory;
     white-space: nowrap;
   }
-
-
 
   .articles-news .articles-grid .article-card {
     min-width: 280px;
@@ -196,7 +191,7 @@
   }
 }
 .nav-btn {
-  background: #1B8354;
+  background: #1b8354;
   margin-top: 2%;
 
   color: white;
@@ -207,7 +202,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  width:48px;
+  width: 48px;
   height: 48px;
   font-size: 14px;
   position: absolute;
@@ -242,7 +237,6 @@
   @media screen and (max-width: 991px) {
     padding-top: 20px;
   }
-
 }
 
 .dot {
@@ -255,6 +249,6 @@
 }
 
 .dot.active {
-  background: #1B8354;
+  background: #1b8354;
   transform: scale(1.5);
 }
