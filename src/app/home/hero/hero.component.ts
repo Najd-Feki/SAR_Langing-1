@@ -93,7 +93,7 @@ export class HeroComponent implements AfterViewInit {
         });
 
         this.updateBulletColors();
-      }, 300);
+      }, 1000);
     }
   }
 
