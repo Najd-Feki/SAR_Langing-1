@@ -18,7 +18,7 @@
             <li *ngFor="let item of menuItems" class="menu-item-container" role="none">
               <button class="header-menu-item" role="menuitem" aria-haspopup="true">
                 <span class="tab-title">{{ item.key | translate }}</span>
-                <span class="arrow-down-01" aria-hidden="true"></span>
+                <span class="arrow-icon" aria-hidden="true"></span>
               </button>
               <ul class="dropdown-menu" *ngIf="item.subItems">
                 <li *ngFor="let subItem of item.subItems" (click)="handleSubItemClick(subItem)">

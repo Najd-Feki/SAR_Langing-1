@@ -112,10 +112,15 @@ toggleMenu() {
     const menu = document.querySelector('.menu-items') as HTMLElement;
     const actions = document.querySelector('.actions') as HTMLElement;
 
+    console.log("Menu element:", menu);
+    console.log("Actions element:", actions);
+
     if (menu && actions) {
       const isActive = menu.classList.contains('active');
-      console.log('Menu toggle clicked. Active:', isActive);
-      console.log("actions", actions)
+
+      console.log("Before Toggle - Menu Active:", isActive);
+      console.log("Before Toggle - Actions Classes:", actions);
+
       if (isActive) {
         menu.classList.remove('active');
         actions.classList.remove('active');
@@ -123,12 +128,20 @@ toggleMenu() {
         menu.classList.add('active');
         actions.classList.add('active');
       }
+
+      console.log("After Toggle - Menu Classes:", menu.classList);
+      console.log("After Toggle - Actions Classes:", actions.classList);
     } else {
-      console.error('Menu or Actions not found');
+      console.error("Menu or Actions not found in DOM!");
     }
   }
 }
 
   
-  
+  menuStates: Record<number, boolean> = {};
+
+toggleMenuItem(index: number): void {
+  this.menuStates[index] = !this.menuStates[index];
+}
+
 }
