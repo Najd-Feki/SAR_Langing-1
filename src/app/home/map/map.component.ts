@@ -8,22 +8,26 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './map.component.scss'
 })
 export class MapComponent implements AfterViewInit {
-  private map: any; // Declare map variable to prevent SSR issues
+  private map: any; 
 
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   async ngAfterViewInit(): Promise<void> {
     if (isPlatformBrowser(this.platformId)) {
-      const L = await import('leaflet'); // Dynamically import Leaflet to prevent SSR issues
+      try {
+        const L = await import('leaflet'); 
 
-      setTimeout(() => {
-        this.initializeMap(L);
-      }, 500);
+        setTimeout(() => {
+          this.initializeMap(L);
+        }, 500);
+      } catch (error) {
+        console.error('Leaflet failed to load:', error);
+      }
     }
   }
 
   private initializeMap(L: any): void {
-    if (!document.getElementById('map')) return; // Prevent errors if element is missing
+    if (!document.getElementById('map')) return; 
 
     this.map = L.map('map').setView([24.7136, 46.6753], 12);
 
