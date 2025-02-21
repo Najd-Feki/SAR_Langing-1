@@ -459,9 +459,10 @@
   .menu-items {
     display: none;
     flex-direction: column;
-    top: 55vh;
+    top: 11vh;
     background: var(--nav-bg);
     width: 100%;
+
     left: 0;
     z-index: 1000;
   }
