@@ -27,7 +27,13 @@
       "STAT_STAR": "Top Rated",
       "STAT_DONATION": "Donations"
     },
+   
+      "PARTNER": {
+        "TITLE": "Our Partners",
+        "LAST_MODIFIED": "Last Modified Date: {{date}} - {{time}} Saudi Arabia Time"
+      },
   
+    
     "SERVICES": {
       "TITLE": "Services Section",
       "DESCRIPTION": "Here you can add a brief description about the purpose of the portal followed with a call to action button and an image or an illustration on the left-hand side.",
