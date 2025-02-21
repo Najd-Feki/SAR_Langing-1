@@ -24,7 +24,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": [  "node_modules/leaflet/dist/leaflet.css",
+"src/styles.scss"],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -32,6 +33,7 @@
               "entry": "src/server.ts"
             }
           },
+          
           "configurations": {
             "production": {
               "budgets": [
@@ -88,7 +90,8 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [  "node_modules/leaflet/dist/leaflet.css",
+"src/styles.scss"],
             "scripts": []
           }
         }
