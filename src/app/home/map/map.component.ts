@@ -31,12 +31,12 @@ export class MapComponent implements AfterViewInit {
       return;
     }
 
-    if (!document.getElementById('mapcont')) {
+    if (!document.getElementById('mapcontainer')) {
       console.error('Map container element not found');
       return;
     }
 
-    this.map = L.map('mapcont').setView([24.7136, 46.6753], 12);
+    this.map = L.map('mapcontainer').setView([24.7136, 46.6753], 12);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
