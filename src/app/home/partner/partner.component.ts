@@ -27,7 +27,7 @@ export class PartnerComponent {
     const formattedDate = currentDate.toLocaleDateString('en-GB');
     const formattedTime = currentDate.toLocaleTimeString('en-GB');
 
-    this.lastModified = this.translate.instant('PARTNER.LAST_MODIFIED', {
+    this.lastModified = this.translate.instant('FOOTER.LAST_MODIFIED', {
       date: formattedDate,
       time: formattedTime
     });

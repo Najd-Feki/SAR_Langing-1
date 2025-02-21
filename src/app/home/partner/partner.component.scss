@@ -2,8 +2,6 @@
   background-color: #ffffff;
   padding: 40px 80px;
   font-family: 'IBM Plex Sans Arabic', sans-serif;
-  text-align: center;
-  direction: rtl; 
 
   .container {
     max-width: 1280px;
@@ -15,7 +13,8 @@
     font-weight: bold;
     color: #000;
     margin-bottom: 20px;
-    text-align: right; 
+    text-align: start; 
+
   }
 
   .partner-carousel {
@@ -77,6 +76,7 @@
       justify-content: center;
       transition: 0.3s;
       position: absolute;
+      direction: rtl; 
 
       &:hover {
         background: #ddd;
