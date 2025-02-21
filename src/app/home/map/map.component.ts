@@ -8,17 +8,16 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './map.component.scss'
 })
 export class MapComponent implements AfterViewInit {
-  private map: any; 
+  private map: any;
 
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   async ngAfterViewInit(): Promise<void> {
     if (isPlatformBrowser(this.platformId)) {
       try {
-        const L = await import('leaflet'); 
-        console.log('Leaflet loaded:', L); // Debugging: Check if Leaflet is loaded correctly
-
-        this.initializeMap(L);
+        const L = await import('leaflet');
+        console.log('Leaflet loaded:', L); 
+        this.initializeMap(L.default); 
       } catch (error) {
         console.error('Leaflet failed to load:', error);
       }
@@ -26,14 +25,18 @@ export class MapComponent implements AfterViewInit {
   }
 
   private initializeMap(L: any): void {
-    if (!document.getElementById('mapcontainer')) {
-      console.error('Map element not found'); // Debugging: Check if the map element exists
+    console.log('Initializing map with:', L);
+    if (!L || !L.map) {
+      console.error('Leaflet is not loaded correctly');
       return;
-    } 
+    }
 
-    console.log('Initializing map with:', L); // Debugging: Check what L contains
+    if (!document.getElementById('mapcont')) {
+      console.error('Map container element not found');
+      return;
+    }
 
-    this.map = L.map('mapcontainer').setView([24.7136, 46.6753], 12);
+    this.map = L.map('mapcont').setView([24.7136, 46.6753], 12);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
