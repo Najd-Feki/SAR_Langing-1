@@ -16,10 +16,9 @@ export class MapComponent implements AfterViewInit {
     if (isPlatformBrowser(this.platformId)) {
       try {
         const L = await import('leaflet'); 
+        console.log('Leaflet loaded:', L); // Debugging: Check if Leaflet is loaded correctly
 
-        setTimeout(() => {
-          this.initializeMap(L);
-        }, 500);
+        this.initializeMap(L);
       } catch (error) {
         console.error('Leaflet failed to load:', error);
       }
@@ -27,9 +26,14 @@ export class MapComponent implements AfterViewInit {
   }
 
   private initializeMap(L: any): void {
-    if (!document.getElementById('map')) return; 
+    if (!document.getElementById('mapcontainer')) {
+      console.error('Map element not found'); // Debugging: Check if the map element exists
+      return;
+    } 
 
-    this.map = L.map('map').setView([24.7136, 46.6753], 12);
+    console.log('Initializing map with:', L); // Debugging: Check what L contains
+
+    this.map = L.map('mapcontainer').setView([24.7136, 46.6753], 12);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
