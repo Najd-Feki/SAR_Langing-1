@@ -6,6 +6,7 @@
   white-space: nowrap;
   font-family: "IBM Plex Sans Arabic", sans-serif;
   direction: ltr;
+  
 }
 
 .articles-news .container {
@@ -194,7 +195,6 @@
 .nav-btn {
   background: #1b8354;
   margin-top: 2%;
-
   color: white;
   border: none;
   padding: 6px;
@@ -212,6 +212,8 @@
   z-index: 10;
   @media screen and (max-width: 991px) {
     margin-top: 20px;
+    margin-bottom: 25px;
+
   }
 }
 
@@ -238,6 +240,7 @@
   cursor: pointer;
   @media screen and (max-width: 991px) {
     padding-top: 20px;
+    height: 10vh;
   }
 }
 
