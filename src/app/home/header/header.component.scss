@@ -179,11 +179,9 @@
       display: none;
       flex-direction: column;
       background: var(--nav-bg);
-      padding: 10px;
       position: absolute;
       top: 72px; 
       z-index: 1000;
-      padding-left: 24px;
       width: 100%;
     }
   
@@ -462,7 +460,6 @@
     top: 11vh;
     background: var(--nav-bg);
     width: 100%;
-
     left: 0;
     z-index: 1000;
   }

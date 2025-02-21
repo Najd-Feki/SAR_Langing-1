@@ -25,10 +25,10 @@
     
     <div class="dots">
       <button class="nav-btn prev"   [ngClass]="{ 'nav-btn-inactive': !isPrevActive() }"
-      (click)="prevSlide()">&#10094;</button>
+      (click)="prevSlide()">&lt;</button>
 
       <button class="nav-btn next"   [ngClass]="{ 'nav-btn-inactive': !isNextActive() }"
-      (click)="nextSlide()">&#10095;</button>
+      (click)="nextSlide()">&gt;</button>
 
       <span *ngFor="let _ of articles; let i = index" 
             class="dot" 

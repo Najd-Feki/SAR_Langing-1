@@ -5,6 +5,7 @@
   overflow-x: hidden;
   white-space: nowrap;
   font-family: "IBM Plex Sans Arabic", sans-serif;
+  direction: ltr;
 }
 
 .articles-news .container {
@@ -216,6 +217,7 @@
 
 .prev {
   right: 80px;
+  
 }
 
 .next {
@@ -251,4 +253,19 @@
 .dot.active {
   background: #1b8354;
   transform: scale(1.5);
+}
+.articles-news[dir="rtl"] .prev {
+  left: 10px;
+}
+
+.articles-news[dir="rtl"] .next {
+  left: 80px;
+}
+
+.articles-news[dir="ltr"] .prev {
+  right: 80px;
+}
+
+.articles-news[dir="ltr"] .next {
+  right: 10px;
 }

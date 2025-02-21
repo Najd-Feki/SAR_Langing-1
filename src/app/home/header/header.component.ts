@@ -96,7 +96,12 @@ export class HeaderComponent {
     }
   }
   
-  closeSearch() {
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * Closes the search interface by setting `isSearchOpen` to false.
+ * This method is typically called when the search needs to be dismissed,
+
+/******  188bc189-5560-4cef-85af-85545c598ae1  *******/  closeSearch() {
     this.isSearchOpen = false;
   }
 
