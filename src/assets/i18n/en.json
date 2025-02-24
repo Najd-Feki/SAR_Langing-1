@@ -1,0 +1,104 @@
+{
+    "HEADER":"Platform name Another string for this to test the long name",
+    "SEARCH":"Search" ,
+    "LOGIN":"Login",
+    "item1":"Item ",
+    "Suggestions":"Suggestions for you",
+    "Training":"Training",
+    "Services":"Services",
+    "Articles":"Articles",
+    "eServices": "eServices",
+    "HERO": {
+      "TITLE_1": "Hero Section",
+      "DESCRIPTION_1": " Here you can add a brief description about the purpose of the portal followed with a call to action button and an image or an illustration on the left-hand side.",
+      "TITLE_2": "Hero Section 2",
+      "DESCRIPTION_2": "Another description for this slide.",
+      "TITLE_3": "Green Background Slide",
+      "DESCRIPTION_3": "This slide has a solid green background!",
+      "TITLE_4": "Grey Background Slide",
+      "DESCRIPTION_4": "This slide has a solid grey background!",
+      "BUTTON": "Primary Button"
+    },
+    "ABOUT": {
+      "TITLE": "About Platform",
+      "DESCRIPTION": "Our platform is an innovative solution designed to provide smart and effective solutions across various fields. It offers an interactive environment for users to exchange knowledge and experiences. The platform includes a variety of tools and features that support collaboration and innovation, helping users achieve their professional and personal goals. We are continuously working to provide the latest technologies and services to ensure a unique and exceptional experience for our users.",
+      "BUTTON": "Secondary",
+      "STAT_PERSON": "Person",
+      "STAT_PLUS": "New Users",
+      "STAT_STAR": "Top Rated",
+      "STAT_DONATION": "Donations"
+    },
+   
+      "PARTNER": {
+        "TITLE": "Our Partners"
+      },
+  
+      "SERVICES_1": {
+        "TITLE": "Patients Services",
+        "DESCRIPTION": "What services provided by the center of the questions and dates and other assistance from other services.",
+        "TAG_1": "The New Patient Services Portal"
+      },
+
+      "SERVICES_2": {
+        "TITLE": "Staff Services",
+        "DESCRIPTION": "Services needed by companies to announce tenders and other financial services in addition to automated procurement and other services.",
+        "TAG_1": "Verification of Certificates"
+      },
+
+    "SERVICES": {
+      "TITLE": "Services Section",
+      "DESCRIPTION": "Here you can add a brief description about the purpose of the portal followed with a call to action button and an image or an illustration on the left-hand side.",
+      "VIEW_ALL": "View all",
+      "CARD_TITLE": "Card Title",
+      "CARD_CONTENT": "Card content placeholder text goes here",
+      "TAG_1": "Tag 1",
+      "TAG_2": "Tag 2",
+      "TAG_3": "Tag 3",
+      "PRIMARY_ACTION": "Action",
+      "SECONDARY_ACTION": " Action"
+    },
+      "ARTICLES": {
+        "SECTION_TITLE": "Articles and News Section",
+        "SECTION_DESCRIPTION": "Here you can add a brief description about the purpose of the portal.",
+        "VIEW_ALL": "View all",
+        "TITLE": "The Title of the News Card in Two Lines",
+        "DESCRIPTION": "Here you can include a brief description of the headline in four lines.Here you can include a brief description of the headline in four lines",
+        "READ_MORE": "Read More",
+        "IMAGE_ALT": "News Image"
+    },
+    "FOOTER": {
+      "OVERVIEW": "Overview",
+      "ABOUT": "About [name of the portal]",
+      "PRIVACY": "Privacy and terms of use",
+      "HOW_TO_USE": "How to use [name of the portal]",
+      "NEWS": "News and events",
+      "SLA_STATISTICS": "Service level agreement statistics",
+      
+      "IMPORTANT_LINKS": "Important Links",
+      "NATIONAL_SERVICE": "National service portal",
+      "OPEN_GOV_DATA": "Open government data",
+      "AI_STRATEGY": "National strategy for data & Artificial intelligence",
+      "OPEN_DATA": "Open data portal",
+      "EPARTICIPATION": "E-Participation portal",
+  
+      "CONTACT_SUPPORT": "Contact & Support",
+      "CUSTOMER_HUB": "Customer hub",
+      "CONTACT_US": "Contact us",
+      "ENGAGE": "Engage with Us",
+      "SUBMIT_COMPLAINT": "Submit complaint",
+      "REPORT_CORRUPTION": "Report corruption",
+  
+      "SOCIAL_MEDIA": "Social Media",
+      "ACCESSIBILITY_TOOLS": "Accessibility Tools",
+  
+      "SITEMAP": "Sitemap",
+      "RSS": "RSS",
+      "MOBILE_APP": "Mobile App",
+      "RIGHTS_RESERVED": "All Rights Reserved for Digital Government Authority",
+      "DEVELOPED_BY": "Developed and Maintained by [insert the name of the entity]",
+      "LAST_MODIFIED": "Last Modified Date: 04/12/2020"
+    }
+  
+    
+    
+  }

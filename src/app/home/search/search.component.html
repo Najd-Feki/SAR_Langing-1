@@ -1,0 +1,51 @@
+<nav class="nav-header-sub-menu"> 
+  <div class="content">
+    <button class="button-close" aria-label="Close search" (click)="closeSearch()">
+      <span class="multiplication-sign"></span>
+    </button>
+    
+    <div class="search-bar" role="search">
+      <div class="search-box">
+        <div class="input-field">
+          <div class="icon-text-stack">
+            <span class="leading-icon"></span>
+            <input
+              type="text"
+              class="text"
+              placeholder="{{ 'SEARCH' | translate }}"
+              aria-label="Search input"
+            />
+            <button class="trailing-icon" aria-label="Voice search">
+              <span class="mic-01"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="button">
+        <span class="text-2">{{ 'SEARCH' | translate }}</span>
+      </button>
+    </div>
+
+    <section class="suggestions">
+      <div class="content-2">
+        <h2 class="text-3">{{ 'Suggestions' | translate }}</h2>
+        <div class="suggestions-2" role="list">
+          <button class="chip" role="listitem">
+            <span class="lead-icon">&#43;</span>
+            <span class="text-4">{{ 'Training' | translate }} </span>
+          </button>
+          <button class="chip" role="listitem">
+            <span class="lead-icon">&#43;</span>
+            <span class="text-5"> {{ 'Services' | translate }} </span>
+          </button>
+          <button class="chip" role="listitem">
+            <span class="lead-icon">&#43;</span>
+            <span class="text-6"> {{ 'Articles' | translate }} </span>
+          </button>
+        </div>
+      </div>
+    </section>
+    
+
+  </div>
+</nav>

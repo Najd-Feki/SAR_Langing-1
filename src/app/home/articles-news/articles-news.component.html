@@ -1,0 +1,40 @@
+<section class="articles-news" [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container">
+    <!-- <div class="header">
+      <div class="text-content">
+        <h2>{{ 'ARTICLES.SECTION_TITLE' | translate }}</h2>
+      </div>
+      <button class="view-all">{{ 'ARTICLES.VIEW_ALL' | translate }}</button>
+    </div> -->
+
+    <div class="articles-wrapper">
+      <div class="articles-grid" #articleContainer>
+        <div class="article-card" *ngFor="let article of articles; let i = index">
+          <div class="article-image">
+            <img [src]="article.image" alt="{{ 'ARTICLES.IMAGE_ALT' | translate }}">
+          </div>
+          <div class="article-content">
+            <h3 [ngStyle]="{ 'direction': isArabic(article.title) ? 'rtl' : 'ltr', 'text-align': isArabic(article.title) ? 'right' : 'left' }">{{ article.title | translate }}</h3>
+            <p [ngStyle]="{ 'direction': isArabic(article.description) ? 'rtl' : 'ltr', 'text-align': isArabic(article.description) ? 'right' : 'left' }">{{ article.description | slice:0:150 }}{{ article.description.length > 150 ? '...' : '' }}</p>
+            <button class="read-more" (click)="readMore(article.Id)">{{ 'ARTICLES.READ_MORE' | translate }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-buttons-container">
+      <button class="nav-btn prev"   [ngClass]="{ 'nav-btn-inactive': !isPrevActive() }"
+      (click)="prevSlide()">&lt;</button>
+
+      <button class="nav-btn next"   [ngClass]="{ 'nav-btn-inactive': !isNextActive() }"
+      (click)="nextSlide()">&gt;</button>
+    </div>
+    <div class="dots">
+
+
+      <span *ngFor="let _ of articles; let i = index" 
+            class="dot" 
+            [class.active]="i === currentSlide" 
+            (click)="goToSlide(i)"></span>
+    </div>
+  </div>
+</section>

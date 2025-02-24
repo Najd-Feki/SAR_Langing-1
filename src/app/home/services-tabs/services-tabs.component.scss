@@ -1,0 +1,136 @@
+.services-tabs {
+    background-color: var(--services-bg);
+    font-family: "IBM Plex Sans Arabic";
+    min-height: 300px;
+    padding: 40px 5%;
+    color: var(--nav-text);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    .tabs {
+      display: flex;
+      gap: 12px;
+      border-bottom: 2px solid var(--nav-border);
+      margin-bottom: 24px;
+
+      button {
+        background: var(--nav-bg);
+        border: 1px solid var(--nav-border);
+        padding: 12px 20px;
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--nav-text);
+        border-radius: 8px 8px 0 0;
+        font-size: var(--font-size-normal);
+
+        &.active {
+          background: #1b8354;
+          border-bottom: 2px solid var(--nav-hover);
+          color: white;
+        }
+  
+        &:hover {
+          background: var(--nav-hover);
+          color: #1b8354;
+        }
+      }
+    }
+  
+    .tab-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+  
+      .left {
+        flex: 1;
+        padding-right: 20px;
+  
+        h2 {
+            font-size: var(--font-size-large);
+          font-weight: bold;
+          color: var(--nav-text);
+          margin-bottom: 12px;
+        }
+  
+        p {
+            font-size: var(--font-size-normal);
+            color: var(--nav-text);
+          line-height: 1.5;
+        }
+      }
+  
+      .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;                
+  
+        .service-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          background: var(--nav-bg);
+          padding: 14px;
+          border-radius: 8px;           
+          cursor: pointer;
+          border: 1px solid var(--nav-border);
+  
+          .icon {
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            flex-shrink: 0;
+          }
+  
+          .text {
+            flex: 1;
+            font-size: var(--font-size-normal);
+            font-weight: 500;
+            color: var(--nav-text);
+          }
+  
+          .arrow {
+            font-size: var(--font-size-medium);
+            font-weight: bold;
+            color: var(--nav-text);
+            transition: transform 0.3s ease;
+          }
+  
+          .rotate-arrow {
+            transform: rotate(180deg); 
+          }
+
+          &:hover {
+            background: var(--nav-hover);
+            color: rgb(0, 0, 0);
+            .text,
+            .arrow {
+              color: #1b8354;
+            }
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 991px) {
+        .tabs {
+          flex-wrap: wrap; 
+          justify-content: center; 
+          width: 100%; 
+          overflow-x: auto; 
+          white-space: nowrap; 
+        }
+      
+        .tabs button {
+          flex: 1 1 auto;
+          min-width: 100px; 
+          text-align: center;
+        }
+        .tab-content {
+            flex-direction: column;
+      
+            .left {
+              padding-right: 0;
+            }
+          }}
+      
+  }
+

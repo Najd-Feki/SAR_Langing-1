@@ -1,0 +1,24 @@
+<section class="partner">
+  <div class="container">
+    <h2>{{ 'PARTNER.TITLE' | translate }}</h2>
+
+    <div class="partner-carousel">
+      <button class="nav-button left" (click)="scrollLeft(carouselContainer)">
+        &lt;
+      </button>
+
+      <div class="carousel-container" #carouselContainer>
+        <div class="partner-card" *ngFor="let partner of partners">
+          <img [src]="partner.logo" alt="Partner Logo">
+          <p>{{ partner.name }}</p>
+        </div>
+      </div>
+
+      <button class="nav-button right" (click)="scrollRight(carouselContainer)">
+        &gt;
+      </button>
+    </div>
+
+    <p class="last-modified">{{ lastModified }}</p>
+  </div>
+</section>

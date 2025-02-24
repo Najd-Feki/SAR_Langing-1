@@ -1,0 +1,126 @@
+.hero-swiper {
+  position: relative;
+  height: 491px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.swiper {
+  height: 100%;
+}
+.swiper-pagination{
+  display:block;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.swiper-slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition-property: transform;
+}
+
+.video-background {
+  width: 100%;
+  height: 100%;  
+  object-fit: cover;
+}
+
+.hero-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.green-background {
+  background: linear-gradient(to right, #14573a 0%, #1b8354 100%);
+}
+
+.grey-background {
+  background-color: #f3f4f6;
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding-left: 80px;
+  padding-right: 80px;
+  color: white;
+  font-family: "IBM Plex Sans Arabic";
+
+  
+  @media screen and (max-width: 991px) {
+    padding-left: 16px;
+  }
+}
+
+.hero-text-content {
+  max-width: 624px;
+  height: auto;
+  margin-top: 120px;
+  @media screen and (max-width: 991px) {
+    margin-top: 15%;
+  }
+}
+.hero-title {
+  margin: 0 0 24px 0;
+  font-size: var(--font-size-xxxxl);
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: "IBM Plex Sans Arabic";
+  @media screen and (max-width: 991px) {
+    font-size: var(--font-size-xxxl);
+    margin-top: 20px;
+    margin-bottom: 4px;
+  }
+}
+.hero-description {
+  width: 100%;
+  max-width: 624px;
+  height: auto;
+  margin-bottom: 32px;
+  line-height: 1.5;
+  font-size: var(--font-size-mediumM);
+  @media screen and (max-width: 991px) {
+    line-height: 1.64;
+    margin-bottom: 5px;
+
+  }
+}
+.swiper-pagination {
+  @media screen and (max-width: 991px) {
+    bottom: 5%;
+  }
+}
+.primary-button {
+  display: inline-block;
+  width: auto;
+  min-width: 144px;
+  padding: 12px 24px;
+  height: auto;
+  border-radius: 4px;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.primary-button:hover {
+  opacity: 0.9;
+}

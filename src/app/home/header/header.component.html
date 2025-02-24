@@ -1,0 +1,83 @@
+<header class="header">
+  <nav class="nav-header-2" role="navigation" aria-label="Main navigation">
+    <div class="header-content">
+      <div class="logo-menu-items">
+        <div class="logo-gov-identifier">
+          <a href="/" class="logo-placeholder" aria-label="Home">
+            <img
+              loading="lazy"
+              src="assets/images/pscc.jpg"
+              class="img"
+              alt="PSCC logo"
+            />
+            <div class="platform-logo-container">
+            <h1 class="platform-logo">{{ 'HEADER' | translate }}</h1></div>
+          </a>
+        </div>
+        <div class="menu-wrapper">
+          <ul class="menu-items" role="menubar">
+            <li *ngFor="let item of menuItems" class="menu-item-container" role="none">
+              <button class="header-menu-item" role="menuitem" aria-haspopup="true" (click)="handletemClick(item)">
+                <span class="tab-title">{{ item.key | translate }}</span>
+                <span class="arrow-icon" *ngIf="item.id !== 2" aria-hidden="true"></span>
+              </button>
+              <ul class="dropdown-menu" *ngIf="item.subItems && item.id !== 2">
+                <li *ngFor="let subItem of item.subItems" (click)="handleSubItemClick(subItem)">
+                  {{ subItem.key | translate }}
+                </li>
+              </ul>
+              
+            </li>
+            <li class="menu-item-container language-menu">
+              <button class="header-menu-item" aria-label="Switch Language" (click)="changeLang()">
+                <span class="lang-icon" aria-hidden="true"></span>
+                <span class="tab-title-3">{{ selectedLangLabel }}</span>
+              </button>
+            </li>
+          </ul>
+          
+        </div>
+        <div class="hamburger-wrapper">
+          <button class="hamburger-menu" (click)="toggleMenu()" aria-label="Open menu">
+            <img loading="lazy" src="/assets/icons/menu-01.svg" class="hamburger-icon" alt="Menu" />
+          </button>
+        </div>
+        <div class="actions">
+        <!-- <button class="header-action-1" (click)="toggleSearch()" aria-label="Search">
+          <span class="leading-icon" aria-hidden="true"></span>
+          <span class="tab-title-2">{{ 'SEARCH' | translate }}</span>
+        </button> -->
+        <div class="language-container">
+          <button class="header-action-2" aria-label="Switch Language" (click)="changeLang()">
+            <span class="lang-icon" aria-hidden="true"></span>
+            <span class="tab-title-3">{{ selectedLangLabel }}</span>
+          </button>
+          <!-- <ul class="language-dropdown" *ngIf="isLangDropdownOpen">
+            <li *ngFor="let lang of languages" (click)="changeLanguage(lang.code)">
+              {{ lang.label }}
+            </li>
+          </ul> -->
+        </div>
+        <!-- <div class="language-container">
+          <button class="header-action-2" aria-label="Switch Language" (click)="toggleLanguageDropdown()">
+            <span class="lang-icon" aria-hidden="true"></span>
+            <span class="tab-title-3">{{ selectedLangLabel }}</span>
+          </button>
+          <ul class="language-dropdown" *ngIf="isLangDropdownOpen">
+            <li *ngFor="let lang of languages" (click)="changeLanguage(lang.code)">
+              {{ lang.label }}
+            </li>
+          </ul>
+        </div> -->
+        <!-- <button class="header-action-3" aria-label="Login">
+          <span class="user" aria-hidden="true"></span>
+          <span class="tab-title-4">{{ 'LOGIN' | translate }}</span>
+        </button> -->
+      </div>
+      </div>
+      
+    </div>
+    <div class="divider" role="separator"></div>
+  </nav>
+  <app-search *ngIf="isSearchOpen" id="searchBar" [isSearchOpen]="isSearchOpen" (closeEvent)="closeSearch()"></app-search>
+</header>

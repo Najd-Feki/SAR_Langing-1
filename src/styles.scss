@@ -1,0 +1,55 @@
+
+:root {
+    --nav-bg-light: rgba(255, 255, 255, 1);
+    --nav-text-light: #161616;
+    --nav-hover-light: rgba(0, 0, 0, 0.04);
+    --nav-border-light: rgba(210, 214, 219, 1);
+    --grey-background-light: #F9FAFB;
+    --grey-background-dark: #383d44;
+    --nav-bg-dark: #384250;
+    --nav-text-dark: #ffffff;
+    --nav-hover-dark: rgba(255, 255, 255, 0.1);
+    --nav-border-dark: rgba(255, 255, 255, 0.2);
+    --font-size-xsmall: 12px;
+    --font-size-small: 14px;
+    --font-size-normal: 16px;
+    --font-size-medium: 18px;
+    --font-size-mediumM: 20px;
+    --font-size-large: 10px;
+    --font-size-xlarge: 30px;
+    --font-size-xl: 36px;
+    --font-size-xxl: 38px;
+    --font-size-xxxl: 50px;
+    --font-size-xxxxl: 60px;
+    --font-size-big:120px;
+    --font-size-ultrabig:200px;
+
+  }
+  
+  body.light-theme {
+    --nav-bg: var(--nav-bg-light);
+    --nav-text: var(--nav-text-light);
+    --nav-hover: var(--nav-hover-light);
+    --nav-border: var(--nav-border-light);
+    --services-bg: var(--grey-background-light);
+    --articles-bg :var(--nav-bg-light);
+    --details-bg: var(--nav-bg-light);
+  }
+  
+  body.dark-theme {
+    --nav-bg: var(--nav-bg-dark);
+    --nav-text: var(--nav-text-dark);
+    --nav-hover: var(--nav-hover-dark);
+    --nav-border: var(--nav-border-dark);
+    --services-bg: var(--grey-background-dark);
+    --articles-bg : var( --nav-bg-dark);
+    --details-bg: var(--nav-bg-dark);
+
+
+  }
+  html, body {
+    margin: 0;
+    padding: 0 !important;
+    height: 100%;
+  }
+  
