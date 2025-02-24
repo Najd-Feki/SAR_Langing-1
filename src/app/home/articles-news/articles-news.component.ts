@@ -92,20 +92,33 @@ private updateDirection(lang: string) {
   currentSlide = 0;
     
   nextSlide() {
-    if (this.currentSlide < this.articles.length - 1) {
-      this.currentSlide++;
-      this.scrollToSlide();
+    if (document.documentElement.dir === 'rtl') {
+      if (this.currentSlide > 0) {
+        this.currentSlide--;
+        this.scrollToSlide();
+      }
+    } else {
+      if (this.currentSlide < this.articles.length - 1) {
+        this.currentSlide++;
+        this.scrollToSlide();
+      }
     }
-
   }
-
+  
   prevSlide() {
-    if (this.currentSlide > 0) {
-      this.currentSlide--;
-      this.scrollToSlide();
+    if (document.documentElement.dir === 'rtl') {
+      if (this.currentSlide < this.articles.length - 1) {
+        this.currentSlide++;
+        this.scrollToSlide();
+      }
+    } else {
+      if (this.currentSlide > 0) {
+        this.currentSlide--;
+        this.scrollToSlide();
+      }
     }
   }
-
+  
   readMore(id: number) {
     // this.router.navigate([`/details`]);
     this.router.navigate(['/details'], { queryParams: { id: id } });
@@ -124,14 +137,30 @@ private updateDirection(lang: string) {
 
   private scrollToSlide() {
     const container = this.articleContainer.nativeElement;
-    const cardWidth = container.children[0].offsetWidth + 20; 
-    container.scrollTo({ left: cardWidth * this.currentSlide, behavior: 'smooth' });
+    const cardWidth = container.children[0].offsetWidth + 20;
+  
+    if (document.documentElement.dir === 'rtl') {
+      container.scrollTo({ left: -cardWidth * this.currentSlide, behavior: 'smooth' });
+    } else {
+      container.scrollTo({ left: cardWidth * this.currentSlide, behavior: 'smooth' });
+    }
   }
+  
   isPrevActive(): boolean {
+    if (document.documentElement.dir === 'ltr') {
+
     return this.currentSlide > 0;
+    } else {
+      return this.currentSlide < this.articles.length - 1;
+    }
   }
 
   isNextActive(): boolean {
+    if (document.documentElement.dir === 'ltr') {
+
     return this.currentSlide < this.articles.length - 1;
+    } else {
+      return this.currentSlide > 0;
+    }
   }
 }
